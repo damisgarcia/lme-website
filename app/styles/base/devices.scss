@@ -1,0 +1,19 @@
+.lme-devices{
+  position: relative;
+  img{
+    margin-bottom: -10rem;
+  }
+}
+
+.lme-devices-layer{
+  margin-top: -4rem;
+}
+
+@media (max-width: $sm) {
+  .lme-devices{
+    margin-bottom: 0px;
+  }
+  .lme-devices-layer{
+    margin-top: 0px;    
+  }
+}

@@ -1,0 +1,30 @@
+$lme-navbar-border-top: 2.0px;
+.navbar{
+  &.navbar--transparent{
+    background-color: transparent !important;
+    border-bottom: none;
+  }
+  &.lme-navbar-default{
+    @extend .navbar-default;
+    ul.navbar-nav{
+      li{
+        &.active a{
+          background-color: transparent;
+          color: $link-color;
+          border-top: $lme-navbar-border-top solid $link-color;
+        }
+        a{
+          border-top: $lme-navbar-border-top solid transparent;
+          color: $link-color;
+          font-family: $font-family-subtitles;
+          text-transform: uppercase;
+          // font-size: 80%;
+        }
+        a:hover, a:focus, &.active a:hover, &.active a:focus{
+          color: $link-color-hover !important;
+          background-color: #f4f4f4;
+        }
+      }
+    }
+  }
+}

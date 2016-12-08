@@ -1,0 +1,24 @@
+.lme-gallery{
+  .lme-gallery-item{
+    position: relative;
+    overflow: hidden;
+    height: 186px;
+    margin: 0px;
+    padding: 0px;
+    background-color: $primary-color;
+    &:hover{
+      cursor: pointer;
+      > div{
+        opacity: 0.5;
+        transform: scale(1.1);
+      }
+    }
+    > div{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 186px;
+      background-origin: content-box;
+      @include transition(all 0.2s ease-in-out);
+    }
+  }
+}
