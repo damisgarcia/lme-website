@@ -1,8 +1,9 @@
 $icon-font-path: '../fonts/';
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/Waves/src/scss/waves.scss";
 // endbower
 
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
@@ -11,6 +12,8 @@ $icon-font-path: '../fonts/';
 @import "base/typhografy";
 @import "base/helpers";
 @import "base/layout";
+@import "base/marker";
+@import "base/contact";
 @import "base/devices";
 @import "base/navbar";
 @import "base/gallery";

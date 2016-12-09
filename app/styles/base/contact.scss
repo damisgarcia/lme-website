@@ -1,0 +1,27 @@
+.lme-contact-form{
+  .form-control{
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid transparentize($text-color, 0.8);
+    border-radius: 0px;
+    &:focus{
+      border-bottom: 2px solid $link-color-hover;
+      box-shadow: none;
+    }
+  }
+  .lme-contact-submit{
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color: $text-color;
+    outline: none;
+    .lme-contact-submit-icon{
+      color: $link-color-hover;
+    }
+    &:active, &:hover, &:focus{
+      color: $text-color;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
