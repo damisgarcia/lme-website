@@ -1,9 +1,10 @@
 $icon-font-path: '../fonts/';
 
 // bower:scss
-@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/Waves/src/scss/waves.scss";
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "bower_components/plyr/src/scss/plyr.scss";
+@import "bower_components/animate.css-scss/animate.scss";
 // endbower
 
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
@@ -27,8 +28,7 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  // padding-top: 20px;
-  // padding-bottom: 20px;
+  padding-top: 60px;
   font-family: $font-family-default;
 }
 

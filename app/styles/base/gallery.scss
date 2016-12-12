@@ -2,18 +2,20 @@ $gallery-item-height: 248px;
 
 .lme-gallery{
   .lme-gallery-item{
+    background-color: $text-color;
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     height: $gallery-item-height;
     margin: 0px;
     padding: 0px;
-    background-color: $text-color;
+
     &:hover{
       cursor: pointer;
       > div{
-        @include animation(scaleInOut 1s $ease-in-out-quad);
-        z-index: 2;
+        @include animation(scaleIn 0.3s ease-in-out);
+        @include box-shadow(inset 0 0 30px $text-color, 0.2);
         transform: scale(1.1);
+        opacity: 1;
       }
     }
     > div{
@@ -21,36 +23,120 @@ $gallery-item-height: 248px;
       background-size: 100%;
       height: $gallery-item-height;
       background-origin: content-box;
+      opacity: 0.8;
+      @include box-shadow(inset 0 0 30px transparentize($text-color, 0.7));
       @include transition(all 0.4s $ease-in-out-quad);
-    }
-  }
-  .lme-gallery-item-description{
-    background-color: $text-color;
-    color: white;
-    width: 100%;
-    height: 40vh;
-    > .row{
-      @include display(flex);
-      @include align-items(center);
-      height: 100%;
-    }
-    .close{
-      position: absolute;
-      right: 3rem;
-      top:30px;
-      color: white;
-      opacity: 0.7;
-      font-size: 5rem;
     }
   }
 }
 
-@include keyframes(scaleInOut) {
-  from{
-    z-index: 0;
-    transform: scale(1);
+@for $i from 1 through 8 {
+  .lme-gallery.animated .lme-gallery-item:nth-child(#{$i}){
+    @include fadeInRight(0.6s, $i * 0.07s);
+  }
+}
+
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
   } to{
+    opacity: 1;
+  }
+}
+
+@include keyframes(scaleIn) {
+  from {
     z-index: 2;
+    transform: scale(1);
+    opacity: 0.8;
+  } to{
     transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.gallery-content {
+  @extend .container;
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width:auto;
+  margin: 0 auto;
+  img{
+    @extend .img-responsive;
+  }
+  .mfp-close{
+    color: transparentize($text-color, 0.7);
+    font-size: 32px;
+    top: 0.25em;
+    right: 0.25em;
+  }
+  .nav.nav-pills{
+    li{
+      &.active a{
+        background-color: transparent;
+        color: $link-color;
+        border-bottom: $lme-navbar-border-top solid $link-color;
+        border-radius: 0px;
+      }
+      a{
+        border-top: $lme-navbar-border-top solid transparent;
+        color: $link-color;
+        font-family: $font-family-subtitles;
+        text-transform: uppercase;
+        // font-size: 80%;
+      }
+      a:hover, a:focus, &.active a:hover, &.active a:focus{
+        color: $link-color-hover !important;
+        background-color: #f4f4f4;
+      }
+    }
+  }
+}
+
+.mfp-zoom-in {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+}
+
+
+[gallery-item-filter]{
+  &:hover,&:focus{
+    cursor: pointer;
   }
 }

@@ -2,7 +2,7 @@ var WavesDirective = function(){
   return {
     restrict: 'A',
     scope:{
-      wave: "="
+      wave: '='
     },
     link: function(scope, element, attrs){      
       Waves.attach(element, scope.wave)

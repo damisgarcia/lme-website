@@ -12,6 +12,8 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/Waves/dist/waves.min.css" />
+    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css" />
+    <link rel="stylesheet" href="/bower_components/plyr/dist/plyr.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -23,13 +25,13 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body ng-controller='ApplicationCtrl as app'>
+  <body id='home' ng-controller='ApplicationCtrl as app' data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <header>
-      <nav class="navbar lme-navbar-default navbar--transparent">
+      <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -37,39 +39,23 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#home" scroll-sref>
               <img src="images/lme.svg" width="98">
             </a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Áreas de Atuação</a></li>
-              <li><a href="#">Portfólio</a></li>
-              <li><a href="#">Contato</a></li>
+            <ul class="nav navbar-nav lme-collapse-navbar-nav navbar-right">
+              <li class="active"><a href="#home" scroll-sref>Home</a></li>
+              <li><a href="#sobre" scroll-sref>Sobre</a></li>
+              <li><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
+              <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
+              <li><a href="#contato" scroll-sref>Contato</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
 
-    <!-- <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Áreas de Atuação</a></li>
-        <li><a href="#">Portfólio</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-      <h3 class="text-muted">LME</h3>
-    </div> -->
-
-    <!-- <div class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">Always a pleasure scaffolding your apps.</p>
-      <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-    </div> -->
     <section>
       <div class="container">
         <div class="row">
@@ -90,7 +76,7 @@
                 </a>
               </li>
             </ul>
-            <div class='line-10 hidden-sm hidden-xs'></div>
+            <div id='sobre' class='line-10 hidden-sm hidden-xs'></div>
             <h3 class='lme-title'>Sobre Nós</h3>
             <hr class="lme-line">
             <p>Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -107,7 +93,7 @@
       </div>
     </section>
 
-    <section class='lme-section-b lme-devices-layer'>
+    <section id='area-de-atuacao' class='lme-section-b lme-devices-layer'>
       <div class="container">
         <div class="row">
           <div class='col-xs-12'>
@@ -154,7 +140,7 @@
       </div>
     </section>
 
-    <section>
+    <section id='portfolio'>
       <div class="container">
         <div class="row">
           <div class='col-md-3 col-xs-12'>
@@ -163,11 +149,11 @@
           </div>
           <div class='col-md-9 col-xs-12'>
             <ul class="nav nav-pills lme-portfolio-pills">
-              <li class="active"><a href="#">Tudo</a></li>
-              <li><a href="#">Sistemas Web/App</a></li>
-              <li><a href="#">HQ</a></li>
-              <li><a href="#">Modelagem 3D</a></li>
-              <li><a href="#">Jogos</a></li>
+              <li gallery-item-filter='all' class='active'><a>Tudo</a></li>
+              <li gallery-item-filter='sistemas-web-app'><a>Sistemas Web/App</a></li>
+              <li gallery-item-filter='hq'><a>HQ</a></li>
+              <li gallery-item-filter='modelagem-3d'><a>Modelagem 3D</a></li>
+              <li gallery-item-filter='jogos'><a>Jogos</a></li>
             </ul>
           </div>
           <div class='col-xs-12'>
@@ -179,55 +165,63 @@
 
     <section>
       <div class="container">
-        <div class="row lme-gallery">
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/violet.svg);'></div>
-          </div>
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/deepblue.svg);'></div>
-          </div>
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/blue.svg);'></div>
-          </div>
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/green.svg);'></div>
-          </div>
-
-          <div class='col-md-12 lme-gallery-item-description'>
-            <div class="row">
-              <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class="col-sm-6">
-                <div class="container-fluid">
-                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <button class="btn btn-primary btn-lg">Ler mais</button>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="container-fluid">
-                  <!--  -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/orange.svg);'></div>
-          </div>
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/lemon.svg);'></div>
-          </div>
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/violet.svg);'></div>
-          </div>
-          <div class="col-md-3 lme-gallery-item">
-            <div class='wave-box' style='background-image: url(images/deepblue.svg);'></div>
+        <div class="row lme-gallery animated">
+          <div class="col-md-3 lme-gallery-item" ng-repeat='portfolio in app.gallery | filterByCategory: $currentCategory' gallery-item='portfolio'>
+            <div class='wave-box' ng-lazy data-original="{{portfolio.image_url}}"></div>
           </div>
         </div>
       </div>
+
+      <gallery-content>
+        <div id="gallery-popup" class="gallery-content mfp-with-anim mfp-hide">
+          <div>
+            <ul class="nav nav-pills " role="tablist">
+              <li role="presentation" class="active"><a href="#desc" aria-controls="home" role="tab" data-toggle="tab">Descrição</a></li>
+              <!-- <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Imagens</a></li> -->
+              <li role="presentation"><a href="#yt" aria-controls="messages" role="tab" data-toggle="tab">Vídeo de Apresentação</a></li>
+              <!-- <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="desc">
+                <div class="row margin-lg-top">
+                  <div class="col-md-4">
+                    <img ng-src="{{currentItem.image_url}}"/>
+                  </div>
+                  <div class="col-md-8">
+                    <h3>{{currentItem.title || 'Lorem ipsum'}}</h3>
+                    <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+                    <button class='btn btn-lg btn-primary'>Visitar Página</button>
+                    <hr>
+                    <ul class='list-inline'>
+                      <li>
+                        <a href="#twitter">
+                          <i class='fa fa-twitter fa-lg margin-right'></i>
+                        </a>
+                        <a href="#facebook">
+                          <i class='fa fa-facebook fa-lg margin-right'></i>
+                        </a>
+                        <a href="#gplus">
+                          <i class='fa fa-github fa-lg margin-right'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="yt">
+                <div class='margin-lg-top' data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </gallery-content>
+
+
     </section>
 
-    <section>
+    <section id='contato'>
       <div class="container">
         <div class="row">
           <div class='col-xs-12'>
@@ -259,7 +253,7 @@
           <form id="contact" method="get" class="lme-contact-form" role="form">
             <div class="row">
               <div class="col-xs-6 col-md-6 form-group">
-                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
               </div>
               <div class="col-xs-6 col-md-6 form-group">
                 <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
@@ -297,11 +291,11 @@
           </div>
           <div class='col-md-8'>
             <ul class="nav nav-pills lme-portfolio-pills">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Áreas de Atuação</a></li>
-              <li><a href="#">Portfólio</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="#home" scroll-sref>Home</a></li>
+              <li><a href="#sobre" scroll-sref>Sobre</a></li>
+              <li><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
+              <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
+              <li><a href="#contato" scroll-sref>Contato</a></li>
             </ul>
           </div>
         </div>
@@ -324,6 +318,13 @@
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/ngmap/build/scripts/ng-map.js"></script>
     <script src="/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="/bower_components/plyr/dist/plyr.js"></script>
+    <script src="/bower_components/plyr/src/js/plyr.js"></script>
+    <script src="/bower_components/jquery_lazyload/jquery.lazyload.js"></script>
+    <script src="/bower_components/jquery_lazyload/jquery.scrollstop.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/animatescroll/animatescroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -346,7 +347,11 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/app/bootstrap.js"></script>
     <script src="scripts/app/applicationCtrl.js"></script>
+    <script src="scripts/app/scrollSref.js"></script>
+    <script src="scripts/app/ngLazy.js"></script>
     <script src="scripts/app/wavesDirective.js"></script>
+    <script src="scripts/app/galleryItemDirective.js"></script>
+    <script src="scripts/app/galleryContentDirective.js"></script>
     <!-- endbuild -->
   </body>
 </html>
