@@ -1,6 +1,6 @@
 var galleryItem = function($rootScope){
   return {
-    restrict: "EA",
+    restrict: 'EA',
     transclude: true,
     scope:{
       galleryItem: '='
@@ -23,7 +23,7 @@ galleryItem.$inject = ['$rootScope']
 
 var galleryItemFilter = function($rootScope){
   return {
-    restrict: "A",
+    restrict: 'A',
     transclude: true,
     scope:{
       galleryItemFilter: '@'

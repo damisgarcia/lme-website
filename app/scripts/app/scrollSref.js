@@ -5,7 +5,7 @@ var scrollSref = function(){
     link: function(scope, element, attrs){
       element.on('click', function(e){
         e.preventDefault()
-        $(attrs.href).animatescroll({easing:"easeInOutCubic"})
+        $(attrs.href).animatescroll({easing:'easeInOutCubic'})
       })
     }
   }

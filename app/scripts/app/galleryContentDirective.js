@@ -1,6 +1,6 @@
 var galleryContent = function($rootScope){
   return {
-    restrict: "E",
+    restrict: 'E',
     transclude: true,
     link: function($scope, element, attrs, ctrl, transclude){
       transclude(function(clone, scope){
@@ -19,7 +19,7 @@ var galleryContent = function($rootScope){
                 plyr.setup()
               },
               beforeOpen: function() {
-                 this.st.mainClass = "mfp-zoom-in";
+                 this.st.mainClass = 'mfp-zoom-in';
               }
             },
             midClick: true,

@@ -3,7 +3,7 @@ var ngLazy = function(){
     restrict: 'A',
     scope: true,
     link: function(scope, element, attrs){
-      $(element).lazyload({effect:"fadeIn"})
+      $(element).lazyload({effect:'fadeIn'})
     }
   }
 }
