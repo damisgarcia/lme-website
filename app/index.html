@@ -165,9 +165,9 @@
 
     <section>
       <div class="container">
-        <div class="row lme-gallery animated">
+        <div class="row lme-gallery">
           <div class="col-md-3 lme-gallery-item" ng-repeat='portfolio in app.gallery | filterByCategory: $currentCategory' gallery-item='portfolio'>
-            <div class='wave-box' ng-lazy data-original="{{portfolio.image_url}}"></div>
+            <div class='wave-box' style="background-image: url({{portfolio.image_url}});"></div>
           </div>
         </div>
       </div>

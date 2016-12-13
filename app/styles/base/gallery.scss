@@ -1,6 +1,14 @@
 $gallery-item-height: 248px;
 
 .lme-gallery{
+  opacity: 1;
+  @include transition(all 0.2s ease-in-out);
+  &.invisible{
+    opacity: 0;
+  }
+  &.invisible .lme-gallery-item{
+    opacity: 0;
+  }
   .lme-gallery-item{
     background-color: $text-color;
     position: relative;
@@ -8,6 +16,27 @@ $gallery-item-height: 248px;
     height: $gallery-item-height;
     margin: 0px;
     padding: 0px;
+    @include transition(all 0.2s ease-in-out);
+    // opacity:1;
+
+    // &.ng-move,
+    // &.ng-enter,
+    // &.ng-leave {
+    //   @include transition(all 0.5s ease);
+    // }
+    //
+    // &.ng-leave.ng-leave-active,
+    // &.ng-move,
+    // &.ng-enter {
+    //   opacity:0;
+    // }
+    //
+    // &.ng-leave,
+    // &.ng-move.ng-move-active,
+    // &.ng-enter.ng-enter-active {
+    //   opacity:1;
+    // }
+
 
     &:hover{
       cursor: pointer;
@@ -32,7 +61,9 @@ $gallery-item-height: 248px;
 
 @for $i from 1 through 8 {
   .lme-gallery.animated .lme-gallery-item:nth-child(#{$i}){
-    @include fadeInRight(0.6s, $i * 0.07s);
+    // @include fadeInRight(0.6s, $i * 0.07s);
+    @include animation(rotateIn 1s ease);
+    @include animation-delay($i * 0.07s);
   }
 }
 
@@ -53,6 +84,16 @@ $gallery-item-height: 248px;
   } to{
     transform: scale(1.1);
     opacity: 1;
+  }
+}
+
+@include keyframes(rotateIn) {
+  from {
+    opacity: 0;
+    @include transform( perspective(600px) rotateY(-90deg) );
+  } to{
+    opacity: 1;
+    @include transform( perspective(600px) rotateY(0deg) );
   }
 }
 

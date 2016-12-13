@@ -22,16 +22,9 @@ var ApplicationCtrl = function($rootScope){
 
   $rootScope.$on('gallery:update', function(e){
     setTimeout(function(){
-      $('.lme-gallery').removeClass('animated')
-    }, 600)
-    !$('.lme-gallery').hasClass('animated') ? $('.lme-gallery').addClass('animated') : false
-  })
-
-  $('.lme-gallery').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
-    setTimeout(function(){
-      $('.lme-gallery').removeClass('animated')
-    }, 600)
-  })
+      $('.lme-gallery').removeClass('invisible')
+    }, 500);
+  });
 
   return self
 }

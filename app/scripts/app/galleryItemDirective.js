@@ -32,11 +32,19 @@ var galleryItemFilter = function($rootScope){
       $rootScope.$currentCategory = 'all'
 
       element.on('click', function(e){
+        if($rootScope.$currentCategory == scope.galleryItemFilter){
+          return false
+        }
+
         angular.element('[gallery-item-filter]').removeClass('active')
         angular.element(element).addClass('active')
 
+        $('.lme-gallery').addClass('invisible')
+
         $rootScope.$currentCategory = scope.galleryItemFilter
-        $rootScope.$apply()
+
+        setTimeout($rootScope.$apply, 300)
+
         scope.$emit('gallery:update')
       })
 
