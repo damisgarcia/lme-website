@@ -1,0 +1,20 @@
+{
+  "name": "cleanblog",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Damis Garcia <damisgarcia@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/deviodigital/cleanblog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
