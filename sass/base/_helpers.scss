@@ -1,0 +1,50 @@
+.lme-section-icon{
+  margin-top: 10px;
+}
+
+.lme-line{
+  border-width: 2px;
+  border-color: $link-color;
+  width: 48px;
+  margin: 1rem 0;
+}
+
+.margin-top{
+  margin-top: 1rem;
+}
+
+.margin-lg-top{
+  margin-top: 2rem;
+}
+
+.margin-left{
+  margin-left: 1rem;
+}
+
+.margin-lg-left{
+  margin-left: 2rem;
+}
+
+.margin-right{
+  margin-right: 1rem;
+}
+
+.margin-lg-right{
+  margin-right: 2rem;
+}
+
+.margin-bottom{
+  margin-bottom: 1rem;
+}
+
+.margin-lg-bottom{
+  margin-top: 2rem;
+}
+
+@for $i from 1 through 10{
+  .line-#{$i}{
+    display: block;
+    width: 100%;
+    height: $i + 0rem;
+  }
+}

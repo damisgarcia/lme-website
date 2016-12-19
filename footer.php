@@ -18,23 +18,23 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<?php do_action('cleanblog_footer_top'); ?>
-					<?php cleanblog_social(); ?>
-				<?php if (get_theme_mod( 'cleanblog_footer_copyright_text' ) !='') { ?>
-					<p class="copyright text-muted"><?php echo get_theme_mod( 'cleanblog_footer_copyright_text' ); ?></p>
-				<?php } else { ?>
-                    <p class="copyright text-muted"><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cleanblog' ) ); ?>" target="_blank"><?php printf( esc_html__( 'Powered by %s', 'cleanblog' ), 'WordPress' ); ?></a> &middot; <?php printf( esc_html__( '%1$s by %2$s.', 'cleanblog' ), 'Clean Blog theme', '<a href="http://www.deviodigital.com" rel="designer" target="_blank">Devio Digital</a>' ); ?></p>
-				<?php } ?>
-				<?php do_action('cleanblog_footer_bottom'); ?>
-                </div>
-				<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
-            </div>
-			<!-- /.row -->
+      <div class='container'>
+        <img src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="115">
+        <div class='row'>
+          <div class='col-md-4'>
+            <p>Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+          </div>
+          <div class='col-md-8'>
+            <ul class="nav nav-pills lme-portfolio-pills">
+              <li><a href="#home" scroll-sref>Home</a></li>
+              <li><a href="#sobre" scroll-sref>Sobre</a></li>
+              <li><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
+              <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
+              <li><a href="#contato" scroll-sref>Contato</a></li>
+            </ul>
+          </div>
         </div>
-		<!-- /.container -->
+      </div>
     </footer>
 	<!-- /footer -->
 

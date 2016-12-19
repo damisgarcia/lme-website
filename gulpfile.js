@@ -11,7 +11,20 @@ gulp.task('styles', function() {
 
 
 gulp.task('vendor', function() {
-  gulp.src('./bower_components/**/*.js')
+  gulp.src([
+    './bower_components/modernizr/modernizr.js',
+    './bower_components/jquery/dist/jquery.js',
+    './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+    './bower_components/angular/angular.js',
+    './bower_components/angular-animate/angular-animate.js',
+    './bower_components/ngmap/build/scripts/ng-map.js',
+    './bower_components/Waves/dist/waves.min.js',
+    './bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+    './bower_components/plyr/dist/plyr.js',
+    './bower_components/jquery_lazyload/jquery.lazyload.js',
+    './bower_components/jquery_lazyload/jquery.scrollstop.js',
+    './bower_components/animatescroll/animatescroll.js'
+  ])
   .pipe(concat_vendor('vendor.js'))
   .pipe(gulp.dest('./dist/'));
 });
