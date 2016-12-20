@@ -7,6 +7,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(../bower_components/Waves/dist/waves.css);
 @import url(../bower_components/magnific-popup/dist/magnific-popup.css);
+@import url(../bower_components/plyr/dist/plyr.css);
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
 @import url("https://fonts.googleapis.com/css?family=Josefin+Slab:700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700");

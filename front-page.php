@@ -151,7 +151,7 @@
       <div class="container">
         <div class="row lme-gallery">
           <div class="col-md-3 lme-gallery-item" ng-repeat='page in app.gallery | filterByCategory: $currentCategory' gallery-item='page'>
-            <div class='wave-box' ng-if='page.image_url' style="background-image: url({{page.image_url}});"></div>
+            <div class='wave-box' ng-if='page.images' style="background-image: url({{page.images.thumbnail.source_url}});"></div>
             <gallery-content>
               <div id="gallery-popup-{{page.id}}" class="gallery-content mfp-with-anim mfp-hide">
                 <div>
@@ -167,7 +167,7 @@
                     <div role="tabpanel" class="tab-pane active" id="desc">
                       <div class="row margin-lg-top">
                         <div class="col-md-4">
-                          <img ng-src="{{page.image_url}}"/>
+                          <img ng-src="{{page.images.full.source_url}}"/>
                         </div>
                         <div class="col-md-8">
                           <h3>{{page.title.rendered || 'Lorem ipsum'}}</h3>
@@ -177,7 +177,7 @@
                       </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="yt">
-                      <div class='margin-lg-top' data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+                      <div class='margin-lg-top' data-type="youtube" data-video-id="{{page.acf.yt_video_id}}"></div>
                     </div>
                   </div>
                 </div>

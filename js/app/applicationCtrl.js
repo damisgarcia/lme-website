@@ -7,7 +7,8 @@ var ApplicationCtrl = function($rootScope, $http, WP){
 
     self.gallery.forEach(function(page){
       $http.get(page._links["wp:featuredmedia"][0].href).then(function(image){
-        angular.extend(page, { image_url: image.data.guid.rendered })
+        angular.extend(page, { images: image.data.media_details.sizes })
+        console.log(page)
       })
     })
   })

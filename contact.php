@@ -34,9 +34,9 @@
     $subject = "New Message from ". $_POST['name'] . " - " . $to;
     $message = $_POST['message'];
 
-    $body  = "Nome: $name\n\nE-mail: $to\n\nMensagem: $message\n";
+    $body  = "Nome: $name\n\nE-mail: $to\n\nMensagem: \n\n$message\n";
 
-    if (smtpmailer(GUSER, $to, $name, $subject, $body)) {
+    if (smtpmailer($to, GUSER, $name, $subject, $body)) {
    	  Header("location: ". $_POST['references']);
     }
     if (!empty($error)) echo $error;
