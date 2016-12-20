@@ -135,12 +135,9 @@
             <hr class="lme-line">
           </div>
           <div class='col-md-9 col-xs-12'>
-            <ul class="nav nav-pills lme-portfolio-pills">
-              <li gallery-item-filter='all' class='active'><a>Tudo</a></li>
-              <li gallery-item-filter='sistemas-web-app'><a>Sistemas Web/App</a></li>
-              <li gallery-item-filter='hq'><a>HQ</a></li>
-              <li gallery-item-filter='modelagem-3d'><a>Modelagem 3D</a></li>
-              <li gallery-item-filter='jogos'><a>Jogos</a></li>
+            <ul class="nav nav-pills lme-portfolio-pills" ng-show="app.categories.length">
+              <li gallery-item-filter='undefined' class='active'><a>Tudo</a></li>
+              <li ng-repeat="category in app.categories" gallery-item-filter='category.id'><a>{{category.name}}</a></li>
             </ul>
           </div>
           <div class='col-xs-12'>
@@ -153,59 +150,42 @@
     <section>
       <div class="container">
         <div class="row lme-gallery">
-          <div class="col-md-3 lme-gallery-item" ng-repeat='portfolio in app.gallery' gallery-item='portfolio'>
-            <div class='wave-box' ng-if='portfolio.image_url' style="background-image: url({{portfolio.image_url}});"></div>
-          </div>
-        </div>
-      </div>
+          <div class="col-md-3 lme-gallery-item" ng-repeat='page in app.gallery | filterByCategory: $currentCategory' gallery-item='page'>
+            <div class='wave-box' ng-if='page.image_url' style="background-image: url({{page.image_url}});"></div>
+            <gallery-content>
+              <div id="gallery-popup-{{page.id}}" class="gallery-content mfp-with-anim mfp-hide">
+                <div>
+                  <ul class="nav nav-pills " role="tablist">
+                    <li role="presentation" class="active"><a href="#desc" aria-controls="home" role="tab" data-toggle="tab">Descrição</a></li>
+                    <!-- <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Imagens</a></li> -->
+                    <li role="presentation"><a href="#yt" aria-controls="messages" role="tab" data-toggle="tab">Vídeo de Apresentação</a></li>
+                    <!-- <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
+                  </ul>
 
-      <gallery-content>
-        <div id="gallery-popup" class="gallery-content mfp-with-anim mfp-hide">
-          <div>
-            <ul class="nav nav-pills " role="tablist">
-              <li role="presentation" class="active"><a href="#desc" aria-controls="home" role="tab" data-toggle="tab">Descrição</a></li>
-              <!-- <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Imagens</a></li> -->
-              <li role="presentation"><a href="#yt" aria-controls="messages" role="tab" data-toggle="tab">Vídeo de Apresentação</a></li>
-              <!-- <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="desc">
-                <div class="row margin-lg-top">
-                  <div class="col-md-4">
-                    <img ng-src="{{currentItem.image_url}}"/>
-                  </div>
-                  <div class="col-md-8">
-                    <h3>{{currentItem.title.rendered || 'Lorem ipsum'}}</h3>
-                    <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
-                    <a ng-href="{{currentItem.link}}" class='btn btn-lg btn-primary'>Visitar Página</a>
-                    <hr>
-                    <ul class='list-inline'>
-                      <li>
-                        <a href="#twitter">
-                          <i class='fa fa-twitter fa-lg margin-right'></i>
-                        </a>
-                        <a href="#facebook">
-                          <i class='fa fa-facebook fa-lg margin-right'></i>
-                        </a>
-                        <a href="#gplus">
-                          <i class='fa fa-github fa-lg margin-right'></i>
-                        </a>
-                      </li>
-                    </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="desc">
+                      <div class="row margin-lg-top">
+                        <div class="col-md-4">
+                          <img ng-src="{{page.image_url}}"/>
+                        </div>
+                        <div class="col-md-8">
+                          <h3>{{page.title.rendered || 'Lorem ipsum'}}</h3>
+                          <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+                          <a ng-href="{{page.link}}" class='btn btn-lg btn-primary'>Visitar Página</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="yt">
+                      <div class='margin-lg-top' data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div role="tabpanel" class="tab-pane" id="yt">
-                <div class='margin-lg-top' data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
-              </div>
-            </div>
+            </gallery-content>
           </div>
         </div>
-      </gallery-content>
-
-
+      </div>
     </section>
 
     <section id='contato'>
@@ -237,7 +217,8 @@
       		</address>
         </div>
         <div class='col-md-8 col-xs-12'>
-          <form id="contact" method="get" class="lme-contact-form" role="form">
+          <form action="<?php bloginfo('template_directory'); ?>/contact.php" method="post" class="lme-contact-form">
+            <input type='hidden' name='references' value="<?php echo get_site_url(); ?>"/>
             <div class="row">
               <div class="col-xs-6 col-md-6 form-group">
                 <input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
@@ -305,6 +286,7 @@
     <!-- application -->
     <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/bootstrap.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/app/wp.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/applicationCtrl.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollSref.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/ngLazy.js"></script>

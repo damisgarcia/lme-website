@@ -1,8 +1,8 @@
-var ApplicationCtrl = function($rootScope, $http){
+var ApplicationCtrl = function($rootScope, $http, WP){
   Waves.attach('.wave-box', ['waves-block', 'waves-float', 'waves-light'])
   Waves.init()
 
-  $http.get("index.php/wp-json/wp/v2/pages").then(function(response){
+  WP.getPages(null,function(response){
     self.gallery = response.data
 
     self.gallery.forEach(function(page){
@@ -10,17 +10,13 @@ var ApplicationCtrl = function($rootScope, $http){
         angular.extend(page, { image_url: image.data.guid.rendered })
       })
     })
-    // self.gallery = [
-    //   {image_url: 'images/behance-1.png', categories: ['sistemas-web-app']},
-    //   {image_url: 'images/behance-2.png', categories: ['sistemas-web-app']},
-    //   {image_url: 'images/behance-3.png', categories: ['hq','modelagem-3d']},
-    //   {image_url: 'images/behance-4.png', categories: ['modelagem-3d']},
-    //   {image_url: 'images/behance-5.png', categories: ['hq']},
-    //   {image_url: 'images/behance-6.png', categories: ['jogos','modelagem-3d']},
-    //   {image_url: 'images/behance-7.png', categories: ['jogos']},
-    //   {image_url: 'images/behance-8.png', categories: ['sistemas-web-app', 'hq']}
-    // ]
   })
+  WP.getPagesCategory(function(pages_category){
+    WP.getCategories({parent: pages_category.id},function(response){
+      self.categories = response.data
+    })
+  })
+
 
   var self = this
 
@@ -37,13 +33,14 @@ var ApplicationCtrl = function($rootScope, $http){
   return self
 }
 
-ApplicationCtrl.$inject = ['$rootScope', '$http']
+ApplicationCtrl.$inject = ['$rootScope', '$http', 'WP']
 
 var FilterByCategory = function(){
-  return function(input, categoryName){
+  return function(input, categoryId){
     var result = []
+    console.log(input, categoryId)
     input.forEach(function(item){
-      item.categories.includes(categoryName) || categoryName == 'all' ? result.push(item) : false
+      item.categories.includes(categoryId) || categoryId == undefined ? result.push(item) : false
     })
     return result
   }

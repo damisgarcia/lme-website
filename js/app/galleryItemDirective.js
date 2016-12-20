@@ -7,7 +7,7 @@ var galleryItem = function($rootScope){
     },
     link: function(scope, element, attrs, ctrl, transclude){
       element.on('click', function(e){
-        scope.$emit('item:change', scope.galleryItem)
+        $rootScope.$emit('item:change', scope.galleryItem)
       })
 
       transclude(function(clone, scope){
@@ -26,10 +26,10 @@ var galleryItemFilter = function($rootScope){
     restrict: 'A',
     transclude: true,
     scope:{
-      galleryItemFilter: '@'
+      galleryItemFilter: '='
     },
     link: function(scope, element, attrs, ctrl, transclude){
-      $rootScope.$currentCategory = 'all'
+      $rootScope.$currentCategory = undefined
 
       element.on('click', function(e){
         if($rootScope.$currentCategory == scope.galleryItemFilter){

@@ -7,11 +7,9 @@ var galleryContent = function($rootScope){
         scope.currentItem = {}
 
         $rootScope.$on('item:change', function(e, data){
-          scope.currentItem = data
-
           $.magnificPopup.open({
             items: {
-                src: '#gallery-popup',
+                src: '#gallery-popup-' + data.id,
             },
             removalDelay: 500,
             callbacks: {
@@ -25,7 +23,6 @@ var galleryContent = function($rootScope){
             midClick: true,
             type: 'inline'
           })
-          $rootScope.$apply()
         })
 
 

@@ -9593,24 +9593,26 @@ footer .lme-portfolio-pills li {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
+    .lme-gallery .lme-gallery-item.ng-move, .lme-gallery .lme-gallery-item.ng-enter, .lme-gallery .lme-gallery-item.ng-leave {
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+    .lme-gallery .lme-gallery-item.ng-leave.ng-leave-active, .lme-gallery .lme-gallery-item.ng-move, .lme-gallery .lme-gallery-item.ng-enter {
+      opacity: 0; }
+    .lme-gallery .lme-gallery-item.ng-leave, .lme-gallery .lme-gallery-item.ng-move.ng-move-active, .lme-gallery .lme-gallery-item.ng-enter.ng-enter-active {
+      opacity: 1; }
     .lme-gallery .lme-gallery-item:hover {
       cursor: pointer; }
       .lme-gallery .lme-gallery-item:hover > div {
         -webkit-animation: scaleIn 0.3s ease-in-out;
         -moz-animation: scaleIn 0.3s ease-in-out;
         animation: scaleIn 0.3s ease-in-out;
-        -webkit-box-shadow: inset 0 0 30px #333333, 0.2;
-        box-shadow: inset 0 0 30px #333333, 0.2;
-        transform: scale(1.1);
-        opacity: 1; }
+        transform: scale(1.1); }
     .lme-gallery .lme-gallery-item > div {
       background-repeat: no-repeat;
       background-size: 100%;
       height: 248px;
       background-origin: content-box;
-      opacity: 0.8;
-      -webkit-box-shadow: inset 0 0 30px rgba(51, 51, 51, 0.3);
-      box-shadow: inset 0 0 30px rgba(51, 51, 51, 0.3);
       -webkit-transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       -moz-transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
@@ -9700,29 +9702,23 @@ footer .lme-portfolio-pills li {
 @-webkit-keyframes scaleIn {
   from {
     z-index: 2;
-    transform: scale(1);
-    opacity: 0.8; }
+    transform: scale(1); }
   to {
-    transform: scale(1.1);
-    opacity: 1; } }
+    transform: scale(1.1); } }
 
 @-moz-keyframes scaleIn {
   from {
     z-index: 2;
-    transform: scale(1);
-    opacity: 0.8; }
+    transform: scale(1); }
   to {
-    transform: scale(1.1);
-    opacity: 1; } }
+    transform: scale(1.1); } }
 
 @keyframes scaleIn {
   from {
     z-index: 2;
-    transform: scale(1);
-    opacity: 0.8; }
+    transform: scale(1); }
   to {
-    transform: scale(1.1);
-    opacity: 1; } }
+    transform: scale(1.1); } }
 
 @-webkit-keyframes rotateIn {
   from {
