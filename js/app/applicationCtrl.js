@@ -1,4 +1,5 @@
 var ApplicationCtrl = function($rootScope, $http, WP){
+  // @private
   Waves.attach('.wave-box', ['waves-block', 'waves-float', 'waves-light'])
   Waves.init()
 
@@ -12,12 +13,14 @@ var ApplicationCtrl = function($rootScope, $http, WP){
       })
     })
   })
+
   WP.getPagesCategory(function(pages_category){
     WP.getCategories({parent: pages_category.id},function(response){
       self.categories = response.data
     })
   })
 
+  // @public
 
   var self = this
 
@@ -35,18 +38,5 @@ var ApplicationCtrl = function($rootScope, $http, WP){
 }
 
 ApplicationCtrl.$inject = ['$rootScope', '$http', 'WP']
-
-var FilterByCategory = function(){
-  return function(input, categoryId){
-    var result = []
-    console.log(input, categoryId)
-    input.forEach(function(item){
-      item.categories.includes(categoryId) || categoryId == undefined ? result.push(item) : false
-    })
-    return result
-  }
-}
-
-angular.module('app').filter('filterByCategory', FilterByCategory)
 
 angular.module('app').controller('ApplicationCtrl', ApplicationCtrl)

@@ -9210,6 +9210,13 @@ footer .lme-portfolio-pills li {
     float: none;
     margin: 20px 0px; } }
 
+.alert.fixed-alert {
+  position: relative;
+  max-width: 992px;
+  left: 0;
+  right: 0;
+  margin: 2rem auto 0px; }
+
 .pin {
   width: 30px;
   height: 30px;

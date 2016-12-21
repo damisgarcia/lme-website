@@ -26,6 +26,8 @@
     "jquery_lazyload": "jquery.lazyload#^1.9.7",
     "angular-animate": "^1.6.0",
     "animatescroll": "^1.0.7",
-    "animate.css-scss": "^3.1.0"
+    "animate.css-scss": "^3.1.0",
+    "string": "stringjs#^3.3.3",
+    "js-url": "^2.3.1"
   }
 }

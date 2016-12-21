@@ -1031,8 +1031,6 @@ jQuery(document).ready(function($) {
     }
 });
 
-console.log('\'Allo \'Allo!');
-
 /**
  * navigation.js
  *

@@ -13,6 +13,8 @@ gulp.task('styles', function() {
 gulp.task('vendor', function() {
   gulp.src([
     './bower_components/modernizr/modernizr.js',
+    './bower_components/string/dist/string.min.js',
+    './bower_components/js-url/url.min.js',
     './bower_components/jquery/dist/jquery.js',
     './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     './bower_components/angular/angular.js',

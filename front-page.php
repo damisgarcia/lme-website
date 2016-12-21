@@ -17,6 +17,8 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <?php require "flash-messages.php" ?>    
+
     <header>
       <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent">
         <div class="container">
@@ -49,6 +51,7 @@
           <div class='col-xs-12 col-sm-6 col-md-6'>
             <h3 class='lme-title'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
             <hr class="lme-line">
+            <p><?php echo session_id(); ?></p>
             <p>Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
             <ul class='list-inline'>
               <li>
@@ -221,19 +224,19 @@
             <input type='hidden' name='references' value="<?php echo get_site_url(); ?>"/>
             <div class="row">
               <div class="col-xs-6 col-md-6 form-group">
-                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
+                <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required />
               </div>
               <div class="col-xs-6 col-md-6 form-group">
                 <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
               </div>
             </div>
-            <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+            <textarea class="form-control" id="message" name="message" placeholder="Mensagem" rows="5"></textarea>
             <br />
             <div class="row">
               <div class="col-xs-12 col-md-12 form-group">
                 <button class="btn btn-primary lme-contact-submit pull-right" type="submit">
                   <i class="fa fa-envelope-o fa-lg lme-contact-submit-icon" aria-hidden="true"></i>
-                  <small>&nbsp; Send Message</small>
+                  <small>&nbsp; Enviar Mensagem</small>
                 </button>
               </div>
             </div>
@@ -284,13 +287,13 @@
     <script src="<?php bloginfo('template_directory'); ?>/dist/main.js"></script>
 
     <!-- application -->
-    <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/bootstrap.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/wp.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/applicationCtrl.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollSref.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/ngLazy.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/wavesDirective.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/app/filterByCategory.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/galleryItemDirective.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/galleryContentDirective.js"></script>
     <!-- endapplication -->
