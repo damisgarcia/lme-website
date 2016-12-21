@@ -1,4 +1,4 @@
-angular.module('app', ['ngAnimate','ngMap'])
+angular.module('app', ['ngAnimate','ngSanitize','ngMap'])
 
 angular.element(function() {
   angular.bootstrap(document,['app'])

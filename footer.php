@@ -14,7 +14,7 @@
     </div>
 	<!-- /.container -->
 
-    <hr class="footer">
+    <div class="line-8"></div>
 
     <!-- Footer -->
     <footer>
@@ -26,11 +26,8 @@
           </div>
           <div class='col-md-8'>
             <ul class="nav nav-pills lme-portfolio-pills">
-              <li><a href="#home" scroll-sref>Home</a></li>
-              <li><a href="#sobre" scroll-sref>Sobre</a></li>
-              <li><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
-              <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
-              <li><a href="#contato" scroll-sref>Contato</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" scroll-sref>Home</a></li>
+              <?php // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '%3$s' ) ); ?>
             </ul>
           </div>
         </div>

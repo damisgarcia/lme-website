@@ -427,7 +427,7 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 	);
 
 } // end cleanblog_register_theme_customizer
-add_action( 'customize_register', 'cleanblog_register_theme_customizer' );
+// add_action( 'customize_register', 'cleanblog_register_theme_customizer' );
 /**
  * Sanitizes the incoming input and returns it prior to serialization.
  *
@@ -575,18 +575,6 @@ function cleanblog_customizer_css() {
 		header.intro-header .row {
 		z-index: 3;
 		position: relative;
-		}
-
-		header.intro-header .container:after {
-		background: rgba(0,0,0,0.2);
-		z-index: 2;
-		content: '';
-		width: 100%;
-		height: 100%;
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
 		}
 
 		@media only screen and (min-width: 1170px)

@@ -17,7 +17,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <?php require "flash-messages.php" ?>    
+    <?php require "flash-messages.php" ?>
 
     <header>
       <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent">
@@ -51,7 +51,6 @@
           <div class='col-xs-12 col-sm-6 col-md-6'>
             <h3 class='lme-title'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
             <hr class="lme-line">
-            <p><?php echo session_id(); ?></p>
             <p>Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
             <ul class='list-inline'>
               <li>
@@ -174,8 +173,7 @@
                         </div>
                         <div class="col-md-8">
                           <h3>{{page.title.rendered || 'Lorem ipsum'}}</h3>
-                          <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
-                          <a ng-href="{{page.link}}" class='btn btn-lg btn-primary'>Visitar Página</a>
+                          <div ng-bind-html="renderHTML(page.excerpt.rendered)"></div>
                         </div>
                       </div>
                     </div>

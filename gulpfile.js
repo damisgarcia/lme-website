@@ -19,6 +19,7 @@ gulp.task('vendor', function() {
     './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     './bower_components/angular/angular.js',
     './bower_components/angular-animate/angular-animate.js',
+    './bower_components/angular-sanitize/angular-sanitize.js',
     './bower_components/ngmap/build/scripts/ng-map.js',
     './bower_components/Waves/dist/waves.min.js',
     './bower_components/magnific-popup/dist/jquery.magnific-popup.js',

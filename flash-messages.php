@@ -2,7 +2,7 @@
   require "vendor/plasticbrain/php-flash-messages/src/FlashMessages.php";
   // A session is required
   if (!session_id()) @session_start();
-  
+
   $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 ?>
 
@@ -19,3 +19,8 @@
     <strong>Não foi possível enviar sua mensagem.</strong>
   </div>
 <? } ?>
+
+<?php
+  // Clear old messages
+  unset($_SESSION['flash_messages']);
+?>

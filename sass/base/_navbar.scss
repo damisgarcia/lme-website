@@ -2,7 +2,7 @@ $lme-navbar-border-top: 2.0px;
 .navbar{
   &.navbar--transparent{
     background-color: white !important;
-    border-bottom: none;
+    // border-bottom: none;
   }
   &.lme-navbar-default{
     @extend .navbar-default;
