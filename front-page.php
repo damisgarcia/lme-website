@@ -157,7 +157,7 @@
       <div class="container">
         <div class="row lme-gallery">
           <div class="col-md-3 lme-gallery-item" ng-repeat='page in app.gallery | filterByCategory: $currentCategory' gallery-item='page'>
-            <div class='wave-box' ng-if='page.images' style="background-image: url({{page.images.thumbnail.source_url}});"></div>
+            <div class='wave-box' ng-if='page.images' style="background-image: url({{page.images.medium.source_url}});"></div>
             <gallery-content>
               <div id="gallery-popup-{{page.id}}" class="gallery-content mfp-with-anim mfp-hide">
                 <div>
