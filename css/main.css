@@ -9289,9 +9289,9 @@ footer .lme-portfolio-pills li {
 
 .intro-header {
   position: relative;
-  height: 240px;
+  height: 320px;
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center center;
   background-size: cover;
   background-color: #f4f4f4;
   -webkit-transition: all 1s linear;
@@ -9954,6 +9954,32 @@ footer .lme-portfolio-pills li {
 
 [gallery-item-filter]:hover, [gallery-item-filter]:focus {
   cursor: pointer; }
+
+.wp-content img.alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+
+.wp-content img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+
+.wp-content img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-content a img.alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+
+.wp-content a img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+
+.wp-content a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .browserupgrade {
   margin: 0.2em 0;

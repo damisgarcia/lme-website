@@ -17,7 +17,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-			
+
 			<div class="postfooter">
 				<?php cleanblog_entry_footer(); ?>
 			</div>
