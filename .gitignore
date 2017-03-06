@@ -21,4 +21,4 @@ $RECYCLE.BIN/
 
 # Ignore these so they're not stored in source control
 node_modules
-bower_components
+# bower_components
