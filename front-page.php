@@ -212,13 +212,13 @@
       <div class="container">
         <div class='col-md-4 col-xs-12'>
           <address>
-      			<strong>Lorem ipsum dolor sit amet, consectetur adipisicing</strong><br>
-        			15 Springfield Way<br>
-        			Hythe<br>
-        			Kent<br>
-        			United Kingdon<br>
-        			CT21 5SH<br>
-        			<abbr title="Phone">P:</abbr> 01234 567 890
+      			<strong>Instituto UFC Virtual</strong><br>
+        			Av. Humberto Monte<br>
+        			Pici, Fortaleza<br>
+        			Ceará<br>
+        			Brasil<br>
+        			60440-554<br>
+        			<abbr title="Phone">Telefone:</abbr> (85) 3366-9457
       		</address>
         </div>
         <div class='col-md-8 col-xs-12'>
