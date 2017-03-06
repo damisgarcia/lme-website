@@ -247,7 +247,7 @@
       </div>
     </section>
 
-    <div map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyBMwlB8SlPsgrqENYLynpPJuIwsqneLI6A">
+    <div map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyBj5YZQy0yiCr-l2Fpyww8kpgGD-1j4ZMs">
       <div class='pin'></div>
       <div class='pulse'></div>
       <ng-map center='[-3.7451943,-38.5757737]' zoom="17" disable-default-u-i="true" draggable='false' scrollWheel="false" disable-double-click-zoom="true" zoomControl='false' styles="{{app.mapStyle}}"></ng-map>
