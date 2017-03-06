@@ -42,9 +42,9 @@
     $body  = "Nome: $name\n\nE-mail: $to\n\nMensagem: \n\n$message\n";
 
     if (smtpmailer($to, GUSER, $name, $subject, $body)) {
-      $msg->warning('Sua mensagem foi enviada com sucesso.', $_POST['references']);
+      // $msg->warning('Sua mensagem foi enviada com sucesso.', $_POST['references']);
     } else{
-      $msg->error('Não foi possível enviar sua mensagem.', $_POST['references']);
+      // $msg->error('Não foi possível enviar sua mensagem.', $_POST['references']);
     }
     if (!empty($error)) echo $error;
   }

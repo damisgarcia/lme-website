@@ -17,7 +17,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <?php require "flash-messages.php" ?>
+    <?php /** require "flash-messages.php" **/ ?>
 
     <header>
       <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent">
