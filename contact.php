@@ -1,10 +1,9 @@
 <?php
-  require_once "vendor/plasticbrain/php-flash-messages/src/FlashMessages.php";
-  require_once("vendor/phpmailer/phpmailer/PHPMailerAutoload.php");
+  session_start();
+?>
 
-  // A session is required
-  if (!session_id()) @session_start();
-  $msg = new \Plasticbrain\FlashMessages\FlashMessages();
+<?php
+  require_once("vendor/phpmailer/phpmailer/PHPMailerAutoload.php");
 
   define('GUSER', 'digitalclass.noreplay@gmail.com');
   define('GPWD', '6f119f98');
@@ -42,9 +41,11 @@
     $body  = "Nome: $name\n\nE-mail: $to\n\nMensagem: \n\n$message\n";
 
     if (smtpmailer($to, GUSER, $name, $subject, $body)) {
-      // $msg->warning('Sua mensagem foi enviada com sucesso.', $_POST['references']);
+      $_SESSION['success'] = 'Sua mensagem foi enviada com sucesso.';
+      echo "<script>window.location.href='{$_POST["references"]}';</script>";
     } else{
-      // $msg->error('Não foi possível enviar sua mensagem.', $_POST['references']);
+      $_SESSION['danger'] = 'Não foi possível enviar sua mensagem.';
+      echo "<script>window.location.href='{$_POST["references"]}';</script>";
     }
     if (!empty($error)) echo $error;
   }

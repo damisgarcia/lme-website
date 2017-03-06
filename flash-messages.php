@@ -1,19 +1,15 @@
 <?php
-  require "vendor/plasticbrain/php-flash-messages/src/FlashMessages.php";
-  // A session is required
-  if (!session_id()) @session_start();
-
-  $msg = new \Plasticbrain\FlashMessages\FlashMessages();
+  session_start()
 ?>
 
-<?php if ($msg->hasMessages($msg::WARNING)) { ?>
+<?php if(isset($_SESSION['success']) && !empty($_SESSION['success'])) { ?>
   <div id="success_email" class="alert alert-warning alert-dismissible fixed-alert fade in text-center">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Sua mensagem foi enviada com sucesso.</strong>
   </div>
 <? } ?>
 
-<?php if ($msg->hasMessages($msg::ERROR)) { ?>
+<?php if(isset($_SESSION['danger']) && !empty($_SESSION['danger'])) {?>
   <div id="fail_email" class="alert alert-danger alert-dismissible fixed-alert fade in text-center">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Não foi possível enviar sua mensagem.</strong>
@@ -22,5 +18,6 @@
 
 <?php
   // Clear old messages
-  unset($_SESSION['flash_messages']);
+  unset($_SESSION['success']);
+  unset($_SESSION['danger']);
 ?>
