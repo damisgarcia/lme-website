@@ -49,27 +49,22 @@
       <div class="container">
         <div class="row">
           <div class='col-xs-12 col-sm-6 col-md-6'>
-            <h3 class='lme-title'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+            <h3 class='lme-title'>LME</h3>
             <hr class="lme-line">
-            <p>Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+            <p>O Laboratório de Mídias Educacionais, vinculado ao Instituto UFC Virtual, tem como objetivo criar soluções tecnológicas inovadoras para a educação à distância.</p>
             <ul class='list-inline'>
               <li>
-                <a href="#twitter">
-                  <i class='fa fa-twitter fa-2x margin-right'></i>
-                </a>
-                <a href="#facebook">
-                  <i class='fa fa-facebook fa-2x margin-right'></i>
-                </a>
-                <a href="#gplus">
-                  <i class='fa fa-google-plus fa-2x margin-right'></i>
-                </a>
+                <a href="https://www.instagram.com/lme.ufc/" target="_blank"><i class='fa fa-instagram fa-2x margin-right'></i></a>
+                <a href="https://www.facebook.com/lmeufc/?ref=nf" target="_blank"><i class='fa fa-facebook fa-2x margin-right'></i></a>
+                <a href="https://www.youtube.com/channel/UCuwWZXApMmAmwAHEw7HvP7w" target="_blank"><i class='fa fa-youtube-play fa-2x margin-right'></i></a>
               </li>
             </ul>
-            <div id='sobre' class='line-10 hidden-sm hidden-xs'></div>
+            <div id='sobre' class='line-6 hidden-sm hidden-xs'></div>
             <h3 class='lme-title'>Sobre Nós</h3>
             <hr class="lme-line">
-            <p>Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit.</p>
+            <p>Criado em 2013 por professores da Universidade Federal do Ceará, o LME é o braço de pesquisa e desenvolvimento do Instituto UFC Virtual. Somos um espaço de experimentação que trabalha na concepção e elaboração de novas tecnologias para a educação à distância.</p>
+            <p>Buscamos dar suporte à EaD em todos os seus aspectos, desde os processos administrativos até o material didático. Entendemos que cada estudante tem seu estilo de aprendizado e tentamos forjar experiências de ensino atraentes que equilibrem interatividade, educação e entretenimento.</p>
+            <p>Para isso, empregamos material multimídia, simuladores, realidade aumentada, aplicações web, animações, jogos, ambientes virtuais de aprendizagem e outras ferramentas que se adequam aos desafios da EaD. <a href="#portfolio">Conheça nosso trabalho</a></p>
           </div>
           <div class='col-xs-12 col-sm-6 col-md-6'>
             <div class='lme-devices'>
@@ -90,38 +85,50 @@
             <hr class="lme-line">
           </div>
 
-          <div class='col-md-4 col-xs-12'>
+          <div class='col-xs-12'>
             <div class="row">
               <div class="col-md-2">
                 <img src="<?php bloginfo('template_directory'); ?>/images/devices.svg" class='lme-section-icon' width="48">
               </div>
-              <div class="col-xs-10">
+              <div class="col-xs-12">
                 <h4>Desenvolvimento de sistemas</h4>
-                <p>Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                <p>Criamos sistemas de apoio para todo o funcionamento da Educação à Distância. Desde a informatização de processos administrativos até novas maneiras de conectar alunos e professores, trabalhamos para inovar e renovar as experiência de ensino e aprendizagem online.</p>
               </div>
             </div>
           </div>
 
-          <div class='col-md-4 col-xs-12'>
+          <div class='col-xs-12'>
             <div class="row">
               <div class="col-md-2">
                 <img src="<?php bloginfo('template_directory'); ?>/images/multiplayer.svg" class='lme-section-icon' width="48">
               </div>
-              <div class="col-xs-10">
+              <div class="col-xs-12">
                 <h4>Desenvolvimento de jogos</h4>
-                <p>Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                <p>A interação do estudante com o conteúdo pode ser didática e divertida, beneficiando alunos, professores e interessados. Para isso, desenvolvemos jogos educativos para dispositivos móveis e ferramentas para gamificação do aprendizado.</p>
               </div>
             </div>
           </div>
 
-          <div class='col-md-4 col-xs-12'>
+          <div class='col-xs-12'>
             <div class="row">
               <div class="col-md-2">
                 <img src="<?php bloginfo('template_directory'); ?>/images/multimedia.svg" class='lme-section-icon' width="48">
               </div>
-              <div class="col-xs-10">
+              <div class="col-xs-12">
                 <h4>Multimídia</h4>
-                <p>Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                <p>Sabemos que determinados conteúdos exigem mais que uma aula tradicional. Por isso, adotamos uma estratégia transmidiática para a criação de conteúdo, investindo em vídeos, animações e histórias em quadrinhos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class='col-xs-12'>
+            <div class="row">
+              <div class="col-md-2">
+                <img src="<?php bloginfo('template_directory'); ?>/images/multimedia.svg" class='lme-section-icon' width="48">
+              </div>
+              <div class="col-xs-12">
+                <h4>Pesquisa e Mineração de dados</h4>
+                <p>Além dos produtos, o LME também se dedica à produção acadêmica. Trabalhamos em conjunto com professores da Universidade Federal do Ceará para estudar as articulações entre educação e tecnologia - o que, por sua vez, estimula à criação de novos recursos e sistemas.</p>
               </div>
             </div>
           </div>
@@ -141,9 +148,6 @@
               <li gallery-item-filter='undefined' class='active'><a>Tudo</a></li>
               <li ng-repeat="category in app.categories" gallery-item-filter='category.id'><a>{{category.name}}</a></li>
             </ul>
-          </div>
-          <div class='col-xs-12'>
-            <p>Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla porttitor accumsan tincidunt.</p>
           </div>
         </div>
       </div>
@@ -246,9 +250,7 @@
     <div map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyBMwlB8SlPsgrqENYLynpPJuIwsqneLI6A">
       <div class='pin'></div>
       <div class='pulse'></div>
-      <ng-map center='[-3.737376,-38.5717552]' zoom="17" disable-default-u-i="true" draggable='false' scrollWheel="false" disable-double-click-zoom="true" zoomControl='false' styles="{{app.mapStyle}}">
-        <!-- <marker position='[-3.737376,-38.5717552]'></marker> -->
-      </ng-map>
+      <ng-map center='[-3.7451943,-38.5757737]' zoom="17" disable-default-u-i="true" draggable='false' scrollWheel="false" disable-double-click-zoom="true" zoomControl='false' styles="{{app.mapStyle}}"></ng-map>
     </div>
 
     <footer>
