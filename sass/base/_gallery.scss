@@ -50,6 +50,7 @@ $gallery-item-height: 248px;
       background-size: cover;
       height: $gallery-item-height;
       background-origin: content-box;
+      background-position: center center;
       @include box-shadow(inset 0 0 30px transparentize($text-color, 0.7));
       @include transition(all 0.4s $ease-in-out-quad);
     }

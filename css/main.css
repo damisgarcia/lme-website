@@ -9756,6 +9756,7 @@ footer .lme-portfolio-pills li {
       background-size: cover;
       height: 248px;
       background-origin: content-box;
+      background-position: center center;
       -webkit-box-shadow: inset 0 0 30px rgba(51, 51, 51, 0.3);
       box-shadow: inset 0 0 30px rgba(51, 51, 51, 0.3);
       -webkit-transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
