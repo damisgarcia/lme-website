@@ -9280,6 +9280,10 @@ footer .lme-portfolio-pills li {
     float: none;
     margin: 20px 0px; } }
 
+@media (max-width: 768px) {
+  .lme-portfolio-pills li {
+    font-size: 80%; } }
+
 .alert.fixed-alert {
   position: relative;
   max-width: 992px;

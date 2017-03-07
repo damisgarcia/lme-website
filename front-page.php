@@ -202,7 +202,7 @@
           </div>
           </div>
           <div class='col-xs-12'>
-            <p>Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla porttitor accumsan tincidunt.</p>
+            <p>Entre em contato para saber mais sobre o LME e conhecer nossas soluções para Educação à Distância.</p>
           </div>
         </div>
       </div>
@@ -255,10 +255,25 @@
 
     <footer>
       <div class='container'>
-        <img src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="115">
         <div class='row'>
           <div class='col-md-4'>
-            <p>Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+            <ul class="list-inline">
+              <li>
+                <a href="http://lme.ufc.br">
+                  <img src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="100">
+                </a>
+              </li>
+              <li>
+                <a href="http://www.virtual.ufc.br" target="_blank">
+                  <img src="<?php bloginfo('template_directory'); ?>/images/virtual.png" width="50" class="margin-right">
+                </a>
+              </li>
+              <li>
+                <a href="http://ufc.br" target="_blank">
+                  <img src="<?php bloginfo('template_directory'); ?>/images/ufc.png" width="40">
+                </a>
+              </li>
+            </ul>
           </div>
           <div class='col-md-8'>
             <ul class="nav nav-pills lme-portfolio-pills">
