@@ -2,15 +2,14 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>www lme ufc br</title>
+    <title><?php bloginfo('name'); ?></title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/lme.png" />
+    <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/lme.png">
+
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" media="all">
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="<?php bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
   </head>
   <body id='home' ng-controller='ApplicationCtrl as app' data-spy="scroll" data-target=".navbar" data-offset="60">
     <!--[if lt IE 10]>
@@ -288,14 +287,15 @@
       </div>
     </footer>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- Google Analytics: change UA-72758160-7 to be your site's ID. -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72758160-7', 'auto');
+      ga('send', 'pageview');
     </script>
 
     <script src="<?php bloginfo('template_directory'); ?>/dist/vendor.js"></script>
