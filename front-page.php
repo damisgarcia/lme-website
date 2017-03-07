@@ -67,7 +67,7 @@
             <p>Para isso, empregamos material multimídia, simuladores, realidade aumentada, aplicações web, animações, jogos, ambientes virtuais de aprendizagem e outras ferramentas que se adequam aos desafios da EaD. <a href="#portfolio">Conheça nosso trabalho</a></p>
           </div>
           <div class='col-xs-12 col-sm-6 col-md-6'>
-            <div class='lme-devices'>
+            <div class='lme-devices hidden-xs'>
               <img src="<?php bloginfo('template_directory'); ?>/images/devices.png" class="img-responsive" style="max-width:80%;">
               <div class="line-10"></div>
               <img src="<?php bloginfo('template_directory'); ?>/images/notebook.png" class="img-responsive">

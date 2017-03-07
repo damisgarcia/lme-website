@@ -9282,7 +9282,7 @@ footer .lme-portfolio-pills li {
 
 @media (max-width: 768px) {
   .lme-portfolio-pills li {
-    font-size: 80%; } }
+    font-size: 60%; } }
 
 .alert.fixed-alert {
   position: relative;
@@ -9994,7 +9994,8 @@ footer .lme-portfolio-pills li {
 /* Space out content a bit */
 body {
   padding-top: 51px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
