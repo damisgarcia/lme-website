@@ -9250,6 +9250,9 @@ section {
       color: #154a63; }
     section.lme-section-b p {
       color: #555; }
+  section .subtitle {
+    font-size: 13px;
+    margin: 1em 0; }
 
 [map-lazy-load] {
   position: relative;
@@ -9719,6 +9722,80 @@ footer .lme-portfolio-pills li {
   color: #e0640e !important;
   background-color: #fff; }
 
+header > .navbar {
+  transition: top 0.2s ease-in-out; }
+
+.nav-up {
+  top: -53px; }
+
+@media (max-width: 768px) {
+  header > .navbar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+    header > .navbar .navbar-header {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; }
+    header > .navbar .navbar-nav {
+      margin: 0px 0px -2px; }
+    header > .navbar li {
+      display: inline;
+      font-size: 8px; }
+      header > .navbar li.active {
+        border-bottom: 2px solid #f58538; }
+      header > .navbar li.active a {
+        border-top: none !important; }
+      header > .navbar li a {
+        border-top: none !important;
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal; }
+    header > .navbar .navbar-brand {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      header > .navbar .navbar-brand img {
+        width: 60px;
+        margin-left: 15px; } }
+
+@media (max-width: 369px) {
+  header > .navbar li a {
+    max-width: 60px !important; } }
+
 .lme-gallery {
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
@@ -9958,6 +10035,18 @@ footer .lme-portfolio-pills li {
 
 [gallery-item-filter]:hover, [gallery-item-filter]:focus {
   cursor: pointer; }
+
+@media (max-width: 768px) {
+  .lme-portfolio-pills li {
+    margin-right: 0px; }
+    .lme-portfolio-pills li a {
+      max-width: 90px !important;
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: normal; } }
 
 .wp-content img.alignright {
   float: right;

@@ -22,24 +22,24 @@
       <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent">
         <div class="container">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button> -->
             <a class="navbar-brand" href="#home" scroll-sref>
               <img src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="98">
             </a>
           </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav lme-collapse-navbar-nav navbar-right">
-              <li class="active"><a href="#home" scroll-sref>Home</a></li>
-              <li><a href="#sobre" scroll-sref>Sobre</a></li>
-              <li><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
-              <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
-              <li><a href="#contato" scroll-sref>Contato</a></li>
-            </ul>
-          </div>
+          <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
+          <ul class="nav navbar-nav lme-collapse-navbar-nav navbar-right">
+            <li class="active"><a href="#home" scroll-sref title="Home">Home</a></li>
+            <li><a href="#sobre" scroll-sref>Sobre</a></li>
+            <li><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
+            <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
+            <li><a href="#contato" scroll-sref>Contato</a></li>
+          </ul>
+          <!-- </div> -->
         </div>
       </nav>
     </header>
@@ -84,50 +84,52 @@
             <hr class="lme-line">
           </div>
 
-          <div class='col-xs-12'>
+          <div class='col-md-6 col-xs-12'>
             <div class="row">
               <div class="col-md-2">
-                <img src="<?php bloginfo('template_directory'); ?>/images/devices.svg" class='lme-section-icon' width="48">
+                <img src="<?php bloginfo('template_directory'); ?>/images/devices.svg" class='lme-section-icon' width="60">
               </div>
-              <div class="col-xs-12">
+              <div class="col-md-10 col-xs-12">
                 <h4>Desenvolvimento de sistemas</h4>
-                <p>Criamos sistemas de apoio para todo o funcionamento da Educação à Distância. Desde a informatização de processos administrativos até novas maneiras de conectar alunos e professores, trabalhamos para inovar e renovar as experiência de ensino e aprendizagem online.</p>
+                <p class='subtitle'>Criamos sistemas de apoio para todo o funcionamento da Educação à Distância. Desde a informatização de processos administrativos até novas maneiras de conectar alunos e professores, trabalhamos para inovar e renovar as experiência de ensino e aprendizagem online.</p>
               </div>
             </div>
           </div>
 
-          <div class='col-xs-12'>
+          <div class='col-md-6 col-xs-12'>
             <div class="row">
               <div class="col-md-2">
-                <img src="<?php bloginfo('template_directory'); ?>/images/multiplayer.svg" class='lme-section-icon' width="48">
+                <img src="<?php bloginfo('template_directory'); ?>/images/multiplayer.svg" class='lme-section-icon' width="60">
               </div>
-              <div class="col-xs-12">
+              <div class="col-md-10 col-xs-12">
                 <h4>Desenvolvimento de jogos</h4>
-                <p>A interação do estudante com o conteúdo pode ser didática e divertida, beneficiando alunos, professores e interessados. Para isso, desenvolvemos jogos educativos para dispositivos móveis e ferramentas para gamificação do aprendizado.</p>
+                <p class='subtitle'>A interação do estudante com o conteúdo pode ser didática e divertida, beneficiando alunos, professores e interessados. Para isso, desenvolvemos jogos educativos para dispositivos móveis e ferramentas para gamificação do aprendizado.</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class='col-xs-12'>
+        <div class="row">
+          <div class='col-md-6 col-xs-12'>
             <div class="row">
               <div class="col-md-2">
-                <img src="<?php bloginfo('template_directory'); ?>/images/multimedia.svg" class='lme-section-icon' width="48">
+                <img src="<?php bloginfo('template_directory'); ?>/images/multimedia.svg" class='lme-section-icon' width="60">
               </div>
-              <div class="col-xs-12">
+              <div class="col-md-10 col-xs-12">
                 <h4>Multimídia</h4>
-                <p>Sabemos que determinados conteúdos exigem mais que uma aula tradicional. Por isso, adotamos uma estratégia transmidiática para a criação de conteúdo, investindo em vídeos, animações e histórias em quadrinhos.</p>
+                <p class='subtitle'>Sabemos que determinados conteúdos exigem mais que uma aula tradicional. Por isso, adotamos uma estratégia transmidiática para a criação de conteúdo, investindo em vídeos, animações e histórias em quadrinhos.</p>
               </div>
             </div>
           </div>
 
-          <div class='col-xs-12'>
+          <div class='col-md-6 col-xs-12'>
             <div class="row">
               <div class="col-md-2">
-                <img src="<?php bloginfo('template_directory'); ?>/images/multimedia.svg" class='lme-section-icon' width="48">
+                <img src="<?php bloginfo('template_directory'); ?>/images/multimedia.svg" class='lme-section-icon' width="60">
               </div>
-              <div class="col-xs-12">
+              <div class="col-md-10 col-xs-12">
                 <h4>Pesquisa e Mineração de dados</h4>
-                <p>Além dos produtos, o LME também se dedica à produção acadêmica. Trabalhamos em conjunto com professores da Universidade Federal do Ceará para estudar as articulações entre educação e tecnologia - o que, por sua vez, estimula à criação de novos recursos e sistemas.</p>
+                <p class='subtitle'>Além dos produtos, o LME também se dedica à produção acadêmica. Trabalhamos em conjunto com professores da Universidade Federal do Ceará para estudar as articulações entre educação e tecnologia - o que, por sua vez, estimula à criação de novos recursos e sistemas.</p>
               </div>
             </div>
           </div>
@@ -150,9 +152,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section>
       <div class="container">
         <div class="row lme-gallery">
           <div class="col-md-3 lme-gallery-item" ng-repeat='page in app.gallery | filterByCategory: $currentCategory' gallery-item='page'>
@@ -191,7 +190,7 @@
         </div>
       </div>
     </section>
-
+    
     <section id='contato'>
       <div class="container">
         <div class="row">
@@ -306,6 +305,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/app/wp.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/applicationCtrl.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollSref.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollDown.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/ngLazy.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/wavesDirective.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/filterByCategory.js"></script>

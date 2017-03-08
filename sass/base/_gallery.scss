@@ -188,3 +188,14 @@ $gallery-item-height: 248px;
     cursor: pointer;
   }
 }
+
+
+@media (max-width: $sm) {
+  .lme-portfolio-pills li{
+    margin-right: 0px;
+    a{
+      max-width: 90px !important;
+      @include ellipsis(100%);
+    }
+  }
+}

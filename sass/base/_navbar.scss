@@ -31,3 +31,55 @@ $lme-navbar-border-top: 2.0px;
     }
   }
 }
+
+
+header > .navbar{
+  transition: top 0.2s ease-in-out;
+}
+
+.nav-up {
+    top: -53px;
+}
+
+@media (max-width: $sm) {
+  header > .navbar{
+    @include display(flex);
+    @include justify-content(center);
+    .navbar-header{
+      @include display(flex);
+      @include justify-content(center);
+    }
+    .navbar-nav{
+      margin: 0px 0px -2px;
+    }
+    li{
+      display: inline;
+      font-size: 8px;
+      &.active{
+        border-bottom: $lme-navbar-border-top solid $link-color;
+      }
+      &.active a{
+        border-top: none !important;
+      }
+      a{
+        border-top: none !important;
+        @include ellipsis(100%);
+      }
+    }
+    .navbar-brand{
+      @include display(flex);
+      img{
+        width: 60px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 369px) {
+  header > .navbar{
+    li a{
+      max-width: 60px !important;
+    }
+  }
+}

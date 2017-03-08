@@ -1,4 +1,4 @@
-var ApplicationCtrl = function($rootScope, $http, WP){
+var ApplicationCtrl = function($rootScope, $http, $scrollDown, WP){
   // @private
   Waves.attach('.wave-box', ['waves-block', 'waves-float', 'waves-light'])
   Waves.init()
@@ -19,6 +19,8 @@ var ApplicationCtrl = function($rootScope, $http, WP){
     })
   })
 
+  $scrollDown.init()
+
   // @public
 
   var self = this
@@ -36,6 +38,6 @@ var ApplicationCtrl = function($rootScope, $http, WP){
   return self
 }
 
-ApplicationCtrl.$inject = ['$rootScope', '$http', 'WP']
+ApplicationCtrl.$inject = ['$rootScope', '$http', '$scrollDown', 'WP']
 
 angular.module('app').controller('ApplicationCtrl', ApplicationCtrl)
