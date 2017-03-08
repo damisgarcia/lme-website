@@ -50,10 +50,11 @@ header > .navbar{
       @include justify-content(center);
     }
     .navbar-nav{
-      margin: 0px 0px -2px;
+      margin: 2px 0px -2px;
     }
     li{
-      display: inline;
+      @include display(inline-flex);
+      @include align-items(center);
       font-size: 8px;
       &.active{
         border-bottom: $lme-navbar-border-top solid $link-color;
