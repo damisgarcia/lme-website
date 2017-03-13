@@ -125,7 +125,7 @@
           <div class='col-md-6 col-xs-12'>
             <div class="row">
               <div class="col-md-2">
-                <img src="<?php bloginfo('template_directory'); ?>/images/multimedia.svg" class='lme-section-icon' width="60">
+                <img src="<?php bloginfo('template_directory'); ?>/images/mineration.svg" class='lme-section-icon' width="60">
               </div>
               <div class="col-md-10 col-xs-12">
                 <h4>Pesquisa e Mineração de dados</h4>
@@ -190,7 +190,7 @@
         </div>
       </div>
     </section>
-    
+
     <section id='contato'>
       <div class="container">
         <div class="row">
