@@ -3,7 +3,7 @@ var ApplicationCtrl = function($rootScope, $http, $scrollDown, WP){
   Waves.attach('.wave-box', ['waves-block', 'waves-float', 'waves-light'])
   Waves.init()
 
-  WP.getPages(null,function(response){
+  WP.getPages({per_page: 50},function(response){
     self.gallery = response.data
 
     self.gallery.forEach(function(page){
@@ -14,7 +14,7 @@ var ApplicationCtrl = function($rootScope, $http, $scrollDown, WP){
   })
 
   WP.getPagesCategory(function(pages_category){
-    WP.getCategories({parent: pages_category.id},function(response){
+    WP.getCategories({parent: pages_category.id, per_page: 50},function(response){
       self.categories = response.data
     })
   })
