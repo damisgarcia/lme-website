@@ -9844,8 +9844,6 @@ header > .navbar {
         -webkit-animation: scaleIn 0.3s ease-in-out;
         -moz-animation: scaleIn 0.3s ease-in-out;
         animation: scaleIn 0.3s ease-in-out;
-        -webkit-box-shadow: inset 0 0 80px #333333, rgba(51, 51, 51, 0.8);
-        box-shadow: inset 0 0 80px #333333, rgba(51, 51, 51, 0.8);
         transform: scale(1.1); }
     .lme-gallery .lme-gallery-item > div {
       background-repeat: no-repeat;
