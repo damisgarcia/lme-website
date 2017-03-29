@@ -7,6 +7,8 @@ $icon-font-path: '../fonts/';
 @import "../bower_components/plyr/src/scss/plyr.scss";
 @import "../bower_components/plyr/dist/plyr.css";
 @import "../bower_components/animate.css-scss/animate.scss";
+@import "../bower_components/slick-carousel/slick/slick.scss";
+@import "../bower_components/slick-carousel/slick/slick-theme.scss";
 
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
 
@@ -21,6 +23,7 @@ $icon-font-path: '../fonts/';
 @import "base/navbar";
 @import "base/gallery";
 @import "base/editor";
+@import "base/team";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -31,8 +34,8 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  background-color: $primary-color;
-  padding-top: 51px;
+  background-color: white;
+  padding-top: 0px;
   font-family: $font-family-default;
   font-size: 16px;
 }

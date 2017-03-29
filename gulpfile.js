@@ -12,6 +12,7 @@ gulp.task('styles', function() {
 
 gulp.task('vendor', function() {
   gulp.src([
+    './bower_components/lodash/lodash.js',
     './bower_components/modernizr/modernizr.js',
     './bower_components/string/dist/string.min.js',
     './bower_components/js-url/url.min.js',
@@ -26,7 +27,8 @@ gulp.task('vendor', function() {
     './bower_components/plyr/dist/plyr.js',
     './bower_components/jquery_lazyload/jquery.lazyload.js',
     './bower_components/jquery_lazyload/jquery.scrollstop.js',
-    './bower_components/animatescroll/animatescroll.js'
+    './bower_components/animatescroll/animatescroll.js',
+    './bower_components/slick-carousel/slick/slick.min.js'
   ])
   .pipe(concat_vendor('vendor.js'))
   .pipe(gulp.dest('./dist/'));

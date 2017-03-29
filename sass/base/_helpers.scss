@@ -41,6 +41,10 @@
   margin-top: 2rem;
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 @for $i from 1 through 10{
   .line-#{$i}{
     display: block;

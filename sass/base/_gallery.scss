@@ -92,13 +92,17 @@ $gallery-item-height: 248px;
   }
 }
 
-.gallery-content {
+.gallery-content{
   @extend .container;
   position: relative;
   background: #FFF;
   padding: 25px;
   width:auto;
   margin: 0 auto;
+  box-shadow: 0 10px 13px -6px rgba(0,0,0,.2), 0 20px 31px 3px rgba(0,0,0,.14), 0 8px 38px 7px rgba(0,0,0,.12);
+  &.darken{
+    background: #EFEFEF;
+  }
   img{
     @extend .img-responsive;
   }
@@ -163,7 +167,8 @@ $gallery-item-height: 248px;
       transform: scale(1);
     }
     &.mfp-bg {
-      opacity: 0.8;
+      @include linear-gradient(#fff, #eee);
+      opacity: 1;
     }
   }
 

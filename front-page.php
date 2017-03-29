@@ -22,17 +22,11 @@
       <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent" data-spy="affix" data-offset-top="330">
         <div class="container">
           <div class="navbar-header">
-            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button> -->
             <a class="navbar-brand" href="#home" scroll-sref>
               <img class='default' src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="98">
               <img class='contrast' src="<?php bloginfo('template_directory'); ?>/images/lme-white.svg" width="98">
             </a>
           </div>
-          <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
           <ul class="nav navbar-nav lme-collapse-navbar-nav navbar-right">
             <li class="active"><a href="#home" scroll-sref title="Home">Home</a></li>
             <li><a href="#sobre" scroll-sref>Sobre</a></li>
@@ -40,7 +34,6 @@
             <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
             <li><a href="#contato" scroll-sref>Contato</a></li>
           </ul>
-          <!-- </div> -->
         </div>
       </nav>
     </header>
@@ -81,11 +74,12 @@
             <p>Buscamos dar suporte à EaD em todos os seus aspectos, desde os processos administrativos até o material didático. Entendemos que cada estudante tem seu estilo de aprendizado e tentamos forjar experiências de ensino atraentes que equilibrem interatividade, educação e entretenimento.</p>
           </div>
           <div class='col-xs-12 col-sm-6 col-md-6'>
-            <p>Para isso, empregamos material multimídia, simuladores, realidade aumentada, aplicações web, animações, jogos, ambientes virtuais de aprendizagem e outras ferramentas que se adequam aos desafios da EaD.</p>
+            <p>Para isso, empregamos material multimídia, simuladores, realidade aumentada, aplicações web, animações, jogos, ambientes virtuais de aprendizagem e outras ferramentas que se adequam aos desafios da EaD. <a href="#portfolio" scroll-sref>Conheça nosso trabalho</a></p>
           </div>
           <div class='col-xs-12'>
             <p class='text-center'>
-              <a href="#portfolio" scroll-sref class='btn btn-accent'>Conheça nosso trabalho</a>
+              <button open-team="" class='btn btn-accent'>Conheça nossa Equipe</button>
+              <?php require "team.php"; ?>
             </p>
           </div>
         </div>
@@ -323,6 +317,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollSref.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollDown.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/ngLazy.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/app/openTeamDirective.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/wavesDirective.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/filterByCategory.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app/galleryItemDirective.js"></script>

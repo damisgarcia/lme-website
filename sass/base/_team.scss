@@ -1,0 +1,42 @@
+#team-popup{
+  padding: 48px;
+  #members > div{
+    padding: 16px 0px;
+    .slick-slide:focus{
+      outline: none !important;
+    }
+
+  }
+  .team-label{
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .member{
+    @include user-select(none);
+    @extend .col-md-3;
+    margin: 16px auto;
+    cursor: default;
+    .member-container{
+      background: rgb(250,250,250);
+      box-shadow: 0 8px 9px -5px rgba(0,0,0,.2), 0 15px 22px 2px rgba(0,0,0,.14), 0 6px 28px 5px rgba(0,0,0,.12);
+      @include transition(all 1s ease);
+      &:hover{
+        box-shadow: 0 9px 11px -5px rgba(0,0,0,.2), 0 18px 28px 2px rgba(0,0,0,.14), 0 7px 34px 6px rgba(0,0,0,.12);
+      }
+      .title, .caption{
+        text-align: center;
+        line-height: 1;
+      }
+      .title{
+        font-weight: bold;
+        margin-top: 16px;
+      }
+      .caption{
+        font-size: 80%;
+        color: $link-color;
+        margin-top: 2px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+}

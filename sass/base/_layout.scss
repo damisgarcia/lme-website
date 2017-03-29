@@ -45,7 +45,7 @@ a{
   text-align: center;
   align-items: center;
   justify-content: center;
-  min-height: 380px;
+  min-height: 431px;
   font-family: $font-family-subtitles;
   .heading{
     font-family: $font-family-titles;
@@ -60,6 +60,7 @@ a{
   }
   .container{
     max-width: 600px;
+    margin-top: 51px;
   }
   .list-inline{
     a{
