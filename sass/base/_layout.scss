@@ -37,9 +37,44 @@ a{
 }
 
 
+// Banner
+.lme-banner{
+  @include display(flex);
+  @include linear-gradient(to bottom, $primary-color, darken($primary-color, 5));
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  font-family: $font-family-subtitles;
+  .heading{
+    font-family: $font-family-titles;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  p{
+    color: $text-color;
+  }
+  .container{
+    max-width: 600px;
+  }
+  .list-inline{
+    a{
+      color: white;
+      &:hover, &:focus{
+        color: darken(white, 10);
+      }
+    }
+  }
+}
+
 // Sections
 section{
   padding: 4rem 0;
+  background-color: white;
   &.lme-section-b{
     background-color: #f4f4f4;
     padding: 6rem 0;

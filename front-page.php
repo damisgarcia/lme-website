@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" media="all">
   </head>
-  <body id='home' ng-controller='ApplicationCtrl as app' data-spy="scroll" data-target=".navbar" data-offset="60">
+  <body id='home' ng-controller='ApplicationCtrl as app' data-spy="scroll" data-target=".navbar" data-offset="329">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -19,7 +19,7 @@
     <?php require "flash-messages.php" ?>
 
     <header>
-      <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent">
+      <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent" data-spy="affix" data-offset-top="330">
         <div class="container">
           <div class="navbar-header">
             <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -28,7 +28,8 @@
               <span class="icon-bar"></span>
             </button> -->
             <a class="navbar-brand" href="#home" scroll-sref>
-              <img src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="98">
+              <img class='default' src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="98">
+              <img class='contrast' src="<?php bloginfo('template_directory'); ?>/images/lme-white.svg" width="98">
             </a>
           </div>
           <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
@@ -44,11 +45,29 @@
       </nav>
     </header>
 
+    <section class="lme-banner primary-banner">
+      <div class="container" id='home'>
+        <div class='heading'>Lorem ipsum dolor sit amet consectetur adipisicing</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul class='list-inline'>
+          <li>
+            <a href="https://www.instagram.com/lme.ufc/" target="_blank"><i class='fa fa-instagram fa-2x margin-right'></i></a>
+            <a href="https://www.facebook.com/lmeufc/?ref=nf" target="_blank"><i class='fa fa-facebook fa-2x margin-right'></i></a>
+            <a href="https://www.youtube.com/channel/UCuwWZXApMmAmwAHEw7HvP7w" target="_blank"><i class='fa fa-youtube-play fa-2x margin-right'></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section>
       <div class="container">
         <div class="row">
+          <div class='col-xs-12' id='sobre'>
+            <h3 class='lme-title'>Sobre Nós</h3>
+            <hr class="lme-line">
+          </div>
           <div class='col-xs-12 col-sm-6 col-md-6'>
-            <h3 class='lme-title'>LME</h3>
+            <!-- <h3 class='lme-title'>LME</h3>
             <hr class="lme-line">
             <p>O Laboratório de Mídias Educacionais, vinculado ao Instituto UFC Virtual, tem como objetivo criar soluções tecnológicas inovadoras para a educação à distância.</p>
             <ul class='list-inline'>
@@ -57,20 +76,17 @@
                 <a href="https://www.facebook.com/lmeufc/?ref=nf" target="_blank"><i class='fa fa-facebook fa-2x margin-right'></i></a>
                 <a href="https://www.youtube.com/channel/UCuwWZXApMmAmwAHEw7HvP7w" target="_blank"><i class='fa fa-youtube-play fa-2x margin-right'></i></a>
               </li>
-            </ul>
-            <div id='sobre' class='line-6 hidden-sm hidden-xs'></div>
-            <h3 class='lme-title'>Sobre Nós</h3>
-            <hr class="lme-line">
+            </ul> -->
             <p>Criado em 2013 por professores da Universidade Federal do Ceará, o LME é o braço de pesquisa e desenvolvimento do Instituto UFC Virtual. Somos um espaço de experimentação que trabalha na concepção e elaboração de novas tecnologias para a educação à distância.</p>
             <p>Buscamos dar suporte à EaD em todos os seus aspectos, desde os processos administrativos até o material didático. Entendemos que cada estudante tem seu estilo de aprendizado e tentamos forjar experiências de ensino atraentes que equilibrem interatividade, educação e entretenimento.</p>
-            <p>Para isso, empregamos material multimídia, simuladores, realidade aumentada, aplicações web, animações, jogos, ambientes virtuais de aprendizagem e outras ferramentas que se adequam aos desafios da EaD. <a href="#portfolio">Conheça nosso trabalho</a></p>
           </div>
           <div class='col-xs-12 col-sm-6 col-md-6'>
-            <div class='lme-devices hidden-xs'>
-              <img src="<?php bloginfo('template_directory'); ?>/images/devices.png" class="img-responsive" style="max-width:80%;">
-              <div class="line-10"></div>
-              <img src="<?php bloginfo('template_directory'); ?>/images/notebook.png" class="img-responsive">
-            </div>
+            <p>Para isso, empregamos material multimídia, simuladores, realidade aumentada, aplicações web, animações, jogos, ambientes virtuais de aprendizagem e outras ferramentas que se adequam aos desafios da EaD.</p>
+          </div>
+          <div class='col-xs-12'>
+            <p class='text-center'>
+              <a href="#portfolio" scroll-sref class='btn btn-accent'>Conheça nosso trabalho</a>
+            </p>
           </div>
         </div>
       </div>

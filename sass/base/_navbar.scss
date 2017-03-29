@@ -1,31 +1,71 @@
 $lme-navbar-border-top: 2.0px;
 .navbar{
   &.navbar--transparent{
-    background-color: white !important;
-    // border-bottom: none;
+    background-color: $primary-color !important;
+    &:not(.affix){
+      border-color: transparent;
+    }
   }
   &.lme-navbar-default{
     @extend .navbar-default;
     .navbar-brand{
-      padding: 0px;
+      padding: 4px 0px;
+      img{
+        display: none;
+      }
     }
-    .lme-collapse-navbar-nav{
-      li{
-        &.active a{
-          background-color: transparent;
-          color: $link-color;
-          border-top: $lme-navbar-border-top solid $link-color;
+    &:not(.affix){
+      .navbar-brand{
+        img.contrast {
+          display: block;
         }
-        a{
-          border-top: $lme-navbar-border-top solid transparent;
-          color: $link-color;
-          font-family: $font-family-subtitles;
-          text-transform: uppercase;
-          // font-size: 80%;
+      }
+      .lme-collapse-navbar-nav{
+        li{
+          &.active a{
+            background-color: transparent;
+            color: white;
+            border-top: $lme-navbar-border-top solid white;
+          }
+          a{
+            border-top: $lme-navbar-border-top solid transparent;
+            color: white;
+            font-family: $font-family-subtitles;
+            text-transform: uppercase;
+            // font-size: 80%;
+          }
+          a:hover, a:focus, &.active a:hover, &.active a:focus, &.active a:visited{
+            color: darken(white, 5) !important;
+            background-color: transparent;
+          }
         }
-        a:hover, a:focus, a:visited, &.active a:hover, &.active a:focus, &.active a:visited{
-          color: $link-color-hover !important;
-          background-color: #fff;
+      }
+    }
+    &.affix{
+      background-color: white !important;
+      .navbar-brand{
+        img.default {
+          display: block;
+        }
+      }
+      .lme-collapse-navbar-nav{
+        li{
+          &.active a{
+            background-color: transparent;
+            color: $link-color;
+            border-top: $lme-navbar-border-top solid $link-color;
+          }
+          a{
+            border-top: $lme-navbar-border-top solid transparent;
+            color: $link-color;
+            font-family: $font-family-subtitles;
+            text-transform: uppercase;
+            // font-size: 80%;
+          }
+          a:hover, a:focus, a:visited, &.active a:hover, &.active a:focus, &.active a:visited{
+            color: $link-color-hover !important;
+            background-color: #fff;
+          }
         }
       }
     }

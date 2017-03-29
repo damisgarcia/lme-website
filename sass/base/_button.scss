@@ -1,0 +1,9 @@
+.btn{
+  &.btn-accent{
+    background-color: $link-color;
+    color: white;
+    &:hover, &:focus{
+      background-color: $link-color-hover;
+    }
+  }
+}

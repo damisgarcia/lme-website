@@ -9241,8 +9241,42 @@ a {
   color: white;
   border-left: 5px solid #f58538; }
 
+.lme-banner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #2c98cc;
+  background-image: -webkit-linear-gradient(top, #2c98cc, #2788b7);
+  background-image: linear-gradient(to bottom,#2c98cc, #2788b7);
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  font-family: "Open Sans", sans-serif; }
+  .lme-banner .heading {
+    font-family: "Josefin Slab", serif;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline; }
+  .lme-banner p {
+    color: #333333; }
+  .lme-banner .container, .lme-banner .gallery-content {
+    max-width: 600px; }
+  .lme-banner .list-inline a {
+    color: white; }
+    .lme-banner .list-inline a:hover, .lme-banner .list-inline a:focus {
+      color: #e6e6e6; }
+
 section {
-  padding: 4rem 0; }
+  padding: 4rem 0;
+  background-color: white; }
   section.lme-section-b {
     background-color: #f4f4f4;
     padding: 6rem 0; }
@@ -9357,6 +9391,12 @@ footer .lme-portfolio-pills li {
       color: white;
       text-shadow: 1px 1px 3px #333;
       font-family: "Open Sans", sans-serif; }
+
+.btn.btn-accent, .gallery-content .btn-accent.read-more {
+  background-color: #f58538;
+  color: white; }
+  .btn.btn-accent:hover, .gallery-content .btn-accent.read-more:hover, .btn.btn-accent:focus, .gallery-content .btn-accent.read-more:focus {
+    background-color: #e0640e; }
 
 .pin {
   width: 30px;
@@ -9702,25 +9742,49 @@ footer .lme-portfolio-pills li {
     margin-top: 0px; } }
 
 .navbar.navbar--transparent {
-  background-color: white !important; }
+  background-color: #2c98cc !important; }
+  .navbar.navbar--transparent:not(.affix) {
+    border-color: transparent; }
 
 .navbar.lme-navbar-default .navbar-brand {
-  padding: 0px; }
+  padding: 4px 0px; }
+  .navbar.lme-navbar-default .navbar-brand img {
+    display: none; }
 
-.navbar.lme-navbar-default .lme-collapse-navbar-nav li.active a {
+.navbar.lme-navbar-default:not(.affix) .navbar-brand img.contrast {
+  display: block; }
+
+.navbar.lme-navbar-default:not(.affix) .lme-collapse-navbar-nav li.active a {
   background-color: transparent;
-  color: #f58538;
-  border-top: 2px solid #f58538; }
+  color: white;
+  border-top: 2px solid white; }
 
-.navbar.lme-navbar-default .lme-collapse-navbar-nav li a {
+.navbar.lme-navbar-default:not(.affix) .lme-collapse-navbar-nav li a {
   border-top: 2px solid transparent;
-  color: #f58538;
+  color: white;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase; }
 
-.navbar.lme-navbar-default .lme-collapse-navbar-nav li a:hover, .navbar.lme-navbar-default .lme-collapse-navbar-nav li a:focus, .navbar.lme-navbar-default .lme-collapse-navbar-nav li a:visited, .navbar.lme-navbar-default .lme-collapse-navbar-nav li.active a:hover, .navbar.lme-navbar-default .lme-collapse-navbar-nav li.active a:focus, .navbar.lme-navbar-default .lme-collapse-navbar-nav li.active a:visited {
-  color: #e0640e !important;
-  background-color: #fff; }
+.navbar.lme-navbar-default:not(.affix) .lme-collapse-navbar-nav li a:hover, .navbar.lme-navbar-default:not(.affix) .lme-collapse-navbar-nav li a:focus, .navbar.lme-navbar-default:not(.affix) .lme-collapse-navbar-nav li.active a:hover, .navbar.lme-navbar-default:not(.affix) .lme-collapse-navbar-nav li.active a:focus, .navbar.lme-navbar-default:not(.affix) .lme-collapse-navbar-nav li.active a:visited {
+  color: #f2f2f2 !important;
+  background-color: transparent; }
+
+.navbar.lme-navbar-default.affix {
+  background-color: white !important; }
+  .navbar.lme-navbar-default.affix .navbar-brand img.default {
+    display: block; }
+  .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li.active a {
+    background-color: transparent;
+    color: #f58538;
+    border-top: 2px solid #f58538; }
+  .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li a {
+    border-top: 2px solid transparent;
+    color: #f58538;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase; }
+  .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li a:hover, .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li a:focus, .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li a:visited, .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li.active a:hover, .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li.active a:focus, .navbar.lme-navbar-default.affix .lme-collapse-navbar-nav li.active a:visited {
+    color: #e0640e !important;
+    background-color: #fff; }
 
 header > .navbar {
   transition: top 0.2s ease-in-out; }
@@ -10095,6 +10159,7 @@ header > .navbar {
 
 /* Space out content a bit */
 body {
+  background-color: #2c98cc;
   padding-top: 51px;
   font-family: "Roboto", sans-serif;
   font-size: 16px; }

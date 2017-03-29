@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 105 50" style="enable-background:new 0 0 105 50;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#3298CB;}
-	.st1{fill:#F58538;}
-</style>
+	 width="841.89px" height="340px" viewBox="0 126.14 841.89 340" enable-background="new 0 126.14 841.89 340" xml:space="preserve"
+	>
 <g>
 	<g>
-		<polygon class="st0" points="30,27.4 19.6,27.4 29.6,17.4 41,28.9 52.5,17.4 68,32.9 58.3,32.9 52.4,27 41,38.5 		"/>
-		<polygon class="st0" points="12.3,44.4 2.5,44.4 12.7,34.3 22.4,34.3 		"/>
-		<polygon class="st0" points="74.9,39.7 79.4,44.4 69.7,44.4 65.3,39.7 		"/>
+		<polygon fill="#3298CB" points="240.541,315.384 157.152,315.384 237.332,235.204 328.738,327.41 420.945,235.204 
+			545.224,359.482 467.449,359.482 420.142,312.175 328.738,404.382 		"/>
+		<polygon fill="#3298CB" points="98.621,451.689 20.044,451.689 101.828,370.707 179.603,370.707 		"/>
+		<polygon fill="#3298CB" points="600.548,414.005 636.628,451.689 558.855,451.689 523.576,414.005 		"/>
 	</g>
 	<g>
-		<polygon class="st1" points="39.5,5.6 16.8,28.5 29.2,28.5 33.6,32.9 2.5,32.9 30,5.6 		"/>
-		<polygon class="st1" points="42.6,38.5 85.1,38.5 80.8,34.3 58,34.3 52.5,28.6 		"/>
-		<polygon class="st1" points="102.5,11.3 69.7,11.3 59,22.1 64.1,27.2 75.2,27.2 79.8,22.6 68.7,22.6 75.5,15.8 98.1,15.8 		"/>
+		<polygon fill="#F58538" points="316.71,140.591 134.703,324.203 234.125,324.203 269.404,359.482 20.044,359.482 240.541,140.591 
+					"/>
+		<polygon fill="#F58538" points="341.566,404.382 682.332,404.382 647.855,370.707 465.044,370.707 420.945,325.005 		"/>
+		<polygon fill="#F58538" points="821.845,186.293 558.855,186.293 473.062,272.888 513.953,313.779 602.953,313.779 
+			639.835,276.897 550.835,276.897 605.359,222.375 786.566,222.375 		"/>
 	</g>
 </g>
 </svg>
