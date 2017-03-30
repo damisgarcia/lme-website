@@ -25,25 +25,23 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> ng-controller='ApplicationCtrl as app' data-target=".navbar" data-offset="329">
   <header>
-    <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent">
+    <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent" data-spy="affix" data-offset-top="330">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" scroll-sref>
-            <img src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="98">
+          <a class="navbar-brand" href="<?php echo get_site_url() ?>">
+            <img class='default' src="<?php bloginfo('template_directory'); ?>/images/lme.svg" width="98">
+            <img class='contrast' src="<?php bloginfo('template_directory'); ?>/images/lme-white.svg" width="98">
           </a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-  				<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '%3$s' ) ); ?>
-  				</ul>
-        </div>
+        <ul class="nav navbar-nav lme-collapse-navbar-nav navbar-right">
+          <li><a href="<?php echo get_site_url() ?>#home" title="Home">Home</a></li>
+          <li><a href="<?php echo get_site_url() ?>#sobre">Sobre</a></li>
+          <li class='hidden-xs'><a href="<?php echo get_site_url() ?>#area-de-atuacao">Áreas de Atuação</a></li>
+          <li><a href="<?php echo get_site_url() ?>#portfolio">Portfólio</a></li>
+          <li><a href="<?php echo get_site_url() ?>#contato">Contato</a></li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -52,4 +50,3 @@
 
     <!-- Main Content -->
     <div class="container">
-        <div class="row">

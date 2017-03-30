@@ -7,7 +7,8 @@ var galleryItem = function($rootScope){
     },
     link: function(scope, element, attrs, ctrl, transclude){
       element.on('click', function(e){
-        $rootScope.$emit('item:change', scope.galleryItem)
+        e.preventDefault()
+        window.location.href = scope.galleryItem.link
       })
 
       transclude(function(clone, scope){

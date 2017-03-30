@@ -9419,6 +9419,31 @@ button.close {
   width: 100%;
   height: 10rem; }
 
+.middle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
 h1, h2 {
   font-family: "Josefin Slab", serif; }
 
@@ -9537,11 +9562,31 @@ footer .lme-portfolio-pills li {
 
 .intro-header {
   position: relative;
-  height: 320px;
+  height: 431px;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: top;
+  background-size: contain;
+  background-attachment: fixed;
   background-color: #f4f4f4;
+  display: row;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-align: end;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: end;
   -webkit-transition: all 1s linear;
   -moz-transition: all 1s linear;
   transition: all 1s linear; }
@@ -9551,7 +9596,7 @@ footer .lme-portfolio-pills li {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     content: ' '; }
   .intro-header > .container, .intro-header > .gallery-content {
     position: relative;
@@ -9573,31 +9618,36 @@ footer .lme-portfolio-pills li {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    box-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    align-items: center;
-    -ms-flex-align: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
+    -ms-flex-align: end;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
     width: 100%;
     height: 100%; }
     .intro-header > .container h1, .intro-header > .gallery-content h1 {
       font-weight: bold;
       color: white;
-      text-shadow: 1px 1px 3px #333;
-      font-family: "Open Sans", sans-serif; }
+      font-size: 48px;
+      font-weight: bold;
+      text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  .intro-header {
+    background-size: cover; } }
 
 .btn.btn-accent, .gallery-content .btn-accent.read-more {
   background-color: #f58538;
@@ -9949,7 +9999,7 @@ footer .lme-portfolio-pills li {
     margin-top: 0px; } }
 
 .navbar.navbar--transparent {
-  background-color: #2c98cc !important; }
+  background-color: transparent !important; }
   .navbar.navbar--transparent:not(.affix) {
     border-color: transparent; }
 

@@ -9,6 +9,16 @@
 
 if ( ! function_exists( 'cleanblog_posts_navigation' ) ) :
 /**
+*
+* @todo Get Main Banner from post
+*
+**/
+
+function post_get_main_banner($post_id){
+	return get_field('mainbannerpage', $post_id)['url'];
+}
+
+/**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
@@ -281,17 +291,17 @@ function cleanblog_header() { ?>
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
 	<?php
-		$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		$feat_image = post_get_main_banner($post->ID);
 	?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
-        <div class="container">
-          <h1><?php single_post_title(); ?></h1>
-					<?php if ( function_exists( 'the_subtitle' ) ) {
-					the_subtitle( '<h2 class="subheading">', '</h2>' );
-					} ?>
-          <span class="meta"><?php cleanblog_posted_on(); ?></span>
-        </div>
-    </header>
+  <section class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
+      <div class="container">
+        <h1><?php single_post_title(); ?></h1>
+				<?php if ( function_exists( 'the_subtitle' ) ) {
+				the_subtitle( '<h2 class="subheading">', '</h2>' );
+				} ?>
+        <span class="meta"><?php cleanblog_posted_on(); ?></span>
+      </div>
+	</section
 
 	<?php } elseif ( is_page_template( 'page-builder.php' ) ) { ?>
 
@@ -300,19 +310,18 @@ function cleanblog_header() { ?>
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
 	<?php
-		$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		$feat_image = post_get_main_banner($post->ID);
 	?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
-        <div class="container">
+		<section class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
+	      <div class="container">
 					<h1><?php single_post_title(); ?></h1>
-					<hr class="small">
 					<?php if ( function_exists( 'the_subtitle' ) ) {
 					the_subtitle( '<span class="subheading">', '</span>' );
 					} ?>
 			<!-- /.row -->
-        </div>
+	      </div>
 		<!-- /.container -->
-    </header>
+		</section>
 
 	<?php } elseif( is_search() ) { ?>
 

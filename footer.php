@@ -8,9 +8,6 @@
  */
 
 ?>
-
-       </div>
-	   <!-- /.row -->
     </div>
 	<!-- /.container -->
 
@@ -26,8 +23,11 @@
           </div>
           <div class='col-md-8'>
             <ul class="nav nav-pills lme-portfolio-pills">
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" scroll-sref>Home</a></li>
-              <?php // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '%3$s' ) ); ?>
+              <li><a href="<?php echo get_site_url() ?>#home" title="Home">Home</a></li>
+              <li><a href="<?php echo get_site_url() ?>#sobre">Sobre</a></li>
+              <li><a href="<?php echo get_site_url() ?>#area-de-atuacao">Áreas de Atuação</a></li>
+              <li><a href="<?php echo get_site_url() ?>#portfolio">Portfólio</a></li>
+              <li><a href="<?php echo get_site_url() ?>#contato">Contato</a></li>
             </ul>
           </div>
         </div>

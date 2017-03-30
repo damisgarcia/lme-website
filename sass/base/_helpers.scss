@@ -52,3 +52,12 @@
     height: $i + 0rem;
   }
 }
+
+
+// FLEXBOX
+
+.middle{
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+}

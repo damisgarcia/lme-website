@@ -30,7 +30,7 @@
           <ul class="nav navbar-nav lme-collapse-navbar-nav navbar-right">
             <li class="active"><a href="#home" scroll-sref title="Home">Home</a></li>
             <li><a href="#sobre" scroll-sref>Sobre</a></li>
-            <li><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
+            <li class='hidden-xs'><a href="#area-de-atuacao" scroll-sref>Áreas de Atuação</a></li>
             <li><a href="#portfolio" scroll-sref>Portfólio</a></li>
             <li><a href="#contato" scroll-sref>Contato</a></li>
           </ul>
