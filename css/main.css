@@ -9649,6 +9649,25 @@ footer .lme-portfolio-pills li {
   .intro-header {
     background-size: cover; } }
 
+.navigation-page {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
+  .navigation-page.affix {
+    top: 50%; }
+  .navigation-page:not(.affix) {
+    position: fixed;
+    opacity: 1;
+    top: 50%; }
+  .navigation-page.left {
+    left: 7.5px; }
+  .navigation-page.right {
+    right: 7.5px; }
+  .navigation-page .btn, .navigation-page .gallery-content .read-more, .gallery-content .navigation-page .read-more {
+    margin-top: 2rem; }
+    .navigation-page .btn .fa, .navigation-page .gallery-content .read-more .fa, .gallery-content .navigation-page .read-more .fa {
+      color: rgba(51, 51, 51, 0.1); }
+
 .btn.btn-accent, .gallery-content .btn-accent.read-more {
   background-color: #f58538;
   color: white; }

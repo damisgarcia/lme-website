@@ -3,31 +3,34 @@ var WP = function($http){
   var self = this
 
   self.getPages = function(args,callback){
+    var request = this.baseurl + "/index.php/wp-json/wp/v2/pages"
     $http({
-      url:"index.php/wp-json/wp/v2/pages",
+      url: request,
       method: "GET",
       params: args
     }).then(callback)
   }
 
   self.getCategories = function(args,callback){
+    var request = this.baseurl + "/index.php/wp-json/wp/v2/categories"
     $http({
-      url:"index.php/wp-json/wp/v2/categories",
+      url:request,
       method: "GET",
       params: args
     }).then(callback)
   }
 
   self.getPagesCategory = function(callback){
+    var request = this.baseurl + "/index.php/wp-json/wp/v2/categories"
     $http({
-      url:"index.php/wp-json/wp/v2/categories",
+      url:request,
       method: "GET",
       params: {slug: 'pages'}
     }).then(function(response){
       callback(response.data[0])
     })
   }
-
+  
   return self
 }
 

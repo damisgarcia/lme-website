@@ -55,7 +55,7 @@ function post_get_banner_optional_4($id){
 }
 
 get_header(); ?>
-  <div class="wp-content">
+  <div class="wp-content">    
     <!-- IS REQUIRED -->
     <div class="row middle">
       <div class="col-md-7 col-sm-6">
@@ -144,13 +144,25 @@ get_header(); ?>
 		<?php endwhile; // End of the loop. ?>
 
 		<?php do_action('cleanblog_page_bottom'); ?>
-	</div>
+
+
+    <div ng-if="app.pages.length">
+      <h3 class='lme-title'>Trabalhos Relacionados</h3>
+      <hr class="lme-line">
+      <div class="row lme-gallery">
+        <div class="col-md-3 lme-gallery-item" ng-repeat='page in app.pages' gallery-item='page'>
+          <div class='wave-box' ng-if='page.images' style="background-image: url({{page.images.medium.source_url}});"></div>
+        </div>
+      </div>
+  	</div>
+  </div>
 <?php get_footer(); ?>
 
 <!-- application -->
 <script src="<?php bloginfo('template_directory'); ?>/js/app/bootstrap.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/app/wp.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/app/applicationCtrl.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/app/pageCtrl.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollSref.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/app/scrollDown.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/app/ngLazy.js"></script>

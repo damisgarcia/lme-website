@@ -204,3 +204,28 @@ footer .lme-portfolio-pills{
     background-size: cover;
   }
 }
+
+// Navigation
+.navigation-page{
+  &.affix{
+    top: 50%;
+  }
+  &:not(.affix){
+    position: fixed;
+    opacity: 1;
+    top: 50%;
+  }
+  &.left{
+    left: 7.5px;
+  }
+  &.right{
+    right: 7.5px;
+  }
+  .btn{
+    margin-top: 2rem;
+    .fa{
+      color: transparentize($text-color, .9);
+    }
+  }
+  @include transition(all 0.3s ease-in);
+}

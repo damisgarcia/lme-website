@@ -9,7 +9,20 @@
 
 ?>
     </div>
-	<!-- /.container -->
+	<!-- /.col-sm-9 -->
+  </div>
+  <div class='col-xs-1'>
+    <div class='navigation-page right' data-spy="affix" data-offset-top="100">
+      <a class='btn btn-link' href='{{app.nextPage.link}}' ng-if="app.nextPage">
+        <i class="fa fa-angle-right fa-4x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <!-- row -->
+  </div>
+  <!-- .container -->
+</div>
+<!-- .row -->
 
     <div class="line-8"></div>
 

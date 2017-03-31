@@ -25,8 +25,8 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> ng-controller='ApplicationCtrl as app' data-target=".navbar" data-offset="329">
-  <header>
+<body <?php body_class(); ?> ng-controller='PageCtrl as app' data-target=".navbar" data-offset="329" ng-init="app.onInit('<?php echo get_site_url() ?>', {postId: <?php echo $post->ID ?> })">
+  <header ng-init="app.getPagesByCategory(<?php echo json_encode(wp_get_post_categories($post->ID)); ?>)">
     <nav class="navbar navbar-fixed-top lme-navbar-default navbar--transparent" data-spy="affix" data-offset-top="330">
       <div class="container">
         <div class="navbar-header">
@@ -47,6 +47,15 @@
   </header>
 
 	<?php cleanblog_header(); ?>
-
-    <!-- Main Content -->
-    <div class="container">
+  <div class='container-fluid'>
+    <div class='row'>
+      <div class='col-xs-1'>
+        <div class='navigation-page left' data-spy="affix" data-offset-top="330">
+          <a class='btn btn-default btn-link' href='{{app.beforePage.link}}' ng-if="app.beforePage">
+            <i class="fa fa-angle-left fa-4x" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class='col-xs-10'>
+        <!-- Main Content -->
+        <div class="container">
